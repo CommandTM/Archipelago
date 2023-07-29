@@ -156,6 +156,64 @@ class CelesteAdvancement(Location):
         # Reflecction 69000133-69000134
         "Reflections B-Side Cassette": AdvData(69000133, "Reflections"),
         "Heavy And Frail": AdvData(69000134, "Reflections"),
+
+        # Summit 69000135-69000189
+        "Summit \"Start\" Berry 1": AdvData(69000135, "Summit"),
+        "Summit \"Start\" Berry 2": AdvData(69000136, "Summit"),
+        "Summit \"Start\" Berry 3": AdvData(69000137, "Summit"),
+        "Summit \"Start\" Berry 4": AdvData(69000138, "Summit"),
+        "Star Jewel": AdvData(69000139, "Summit"),
+        "Summit \"500M\" Berry 1": AdvData(69000140, "Summit"),
+        "Summit \"500M\" Berry 2": AdvData(69000141, "Summit"),
+        "Summit \"500M\" Berry 3": AdvData(69000142, "Summit"),
+        "Summit \"500M\" Berry 4": AdvData(69000143, "Summit"),
+        "Summit \"500M\" Berry 5": AdvData(69000144, "Summit"),
+        "Summit \"500M\" Berry 6": AdvData(69000145, "Summit"),
+        "Sapphire Jewel": AdvData(69000146, "Summit"),
+        "Summit \"1000M\" Berry 1": AdvData(69000147, "Summit"),
+        "Summit \"1000M\" Berry 2": AdvData(69000148, "Summit"),
+        "Summit \"1000M\" Berry 3": AdvData(69000149, "Summit"),
+        "Summit \"1000M\" Berry 4": AdvData(69000150, "Summit"),
+        "Summit \"1000M\" Berry 5": AdvData(69000151, "Summit"),
+        "Summit \"1000M\" Berry 6": AdvData(69000152, "Summit"),
+        "Emerald Jewel": AdvData(69000153, "Summit"),
+        "Summit \"1500M\" Berry 1": AdvData(69000154, "Summit"),
+        "Summit \"1500M\" Berry 2": AdvData(69000155, "Summit"),
+        "Summit \"1500M\" Berry 3": AdvData(69000156, "Summit"),
+        "Summit \"1500M\" Berry 4": AdvData(69000157, "Summit"),
+        "Summit \"1500M\" Berry 5": AdvData(69000158, "Summit"),
+        "Summit \"1500M\" Berry 6": AdvData(69000159, "Summit"),
+        "Summit \"1500M\" Berry 7": AdvData(69000160, "Summit"),
+        "Summit \"1500M\" Berry 8": AdvData(69000161, "Summit"),
+        "Gold Jewel": AdvData(69000162, "Summit"),
+        "Summit B-Side Cassette": AdvData(69000163, "Summit"),
+        "Summit \"2000M\" Berry 1": AdvData(69000164, "Summit"),
+        "Summit \"2000M\" Berry 2": AdvData(69000165, "Summit"),
+        "Summit \"2000M\" Berry 3": AdvData(69000166, "Summit"),
+        "Summit \"2000M\" Berry 4": AdvData(69000167, "Summit"),
+        "Summit \"2000M\" Berry 5": AdvData(69000168, "Summit"),
+        "Summit \"2000M\" Berry 6": AdvData(69000169, "Summit"),
+        "Summit \"2000M\" Berry 7": AdvData(69000170, "Summit"),
+        "Summit \"2000M\" Berry 8": AdvData(69000171, "Summit"),
+        "Diamond Jewel": AdvData(69000172, "Summit"),
+        "Summit \"2500M\" Berry 1": AdvData(69000173, "Summit"),
+        "Summit \"2500M\" Berry 2": AdvData(69000174, "Summit"),
+        "Summit \"2500M\" Berry 3": AdvData(69000175, "Summit"),
+        "Summit \"2500M\" Berry 4": AdvData(69000176, "Summit"),
+        "Summit \"2500M\" Berry 5": AdvData(69000177, "Summit"),
+        "Summit \"2500M\" Berry 6": AdvData(69000178, "Summit"),
+        "Summit \"2500M\" Berry 7": AdvData(69000179, "Summit"),
+        "Summit \"2500M\" Berry 8": AdvData(69000180, "Summit"),
+        "Pearl Jewel": AdvData(69000181, "Summit"),
+        "Summit \"3000M\" Berry 1": AdvData(69000182, "Summit"),
+        "Summit \"3000M\" Berry 2": AdvData(69000183, "Summit"),
+        "Summit \"3000M\" Berry 3": AdvData(69000184, "Summit"),
+        "Summit \"3000M\" Berry 4": AdvData(69000185, "Summit"),
+        "Summit \"3000M\" Berry 5": AdvData(69000186, "Summit"),
+        "Summit \"3000M\" Berry 6": AdvData(69000187, "Summit"),
+        "Summit \"3000M\" Berry 7": AdvData(69000188, "Summit"),
+        "Pink Sunrise": AdvData(69000189, "Summit")
+
     }
 
     exclusion_table = {
@@ -165,7 +223,8 @@ class CelesteAdvancement(Location):
             "Celestial Resort B-Side Cassette",
             "Golden Ridge B-Side Cassette",
             "Mirror Temple B-Side Cassette",
-            "Reflections B-Side Cassette"
+            "Reflections B-Side Cassette",
+            "Summit B-Side Cassette"
         },
         "Crystal Hearts": {
             "Pointless Machine",
@@ -173,6 +232,17 @@ class CelesteAdvancement(Location):
             "Scattered And Lost",
             "Eye Of The Storm",
             "Quiet And Falling",
-            "Heavy And Frail"
+            "Heavy And Frail",
+            "Pink Sunrise"
+        },
+        "7a Jewels": {
+            "Star Jewel",
+            "Sapphire Jewel",
+            "Emerald Jewel",
+            "Gold Jewel",
+            "Diamond Jewel",
+            "Pearl Jewel"
         }
     }
+
+# ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
