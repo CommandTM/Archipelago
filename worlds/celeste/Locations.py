@@ -10,6 +10,7 @@ class CelesteAdvancement(Location):
     game: str = "Celeste"
 
     advancement_table = {
+        # Forsaken City 69000000-69000021
         "Forsaken City \"Start\" Berry 1": AdvData(69000000, "Forsaken City"),
         "Forsaken City \"Start\" Berry 2": AdvData(69000001, "Forsaken City"),
         "Forsaken City \"Start\" Berry 3": AdvData(69000002, "Forsaken City"),
@@ -32,6 +33,8 @@ class CelesteAdvancement(Location):
         "Forsaken City \"Chasm\" Berry 5": AdvData(69000019, "Forsaken City"),
         "Forsaken City B-Side Cassette": AdvData(69000020, "Forsaken City"),
         "Pointless Machine": AdvData(69000021, "Forsaken City"),
+
+        # Old Site 69000022-69000041
         "Old Site \"Start\" Berry 1": AdvData(69000022, "Old Site"),
         "Old Site \"Start\" Berry 2": AdvData(69000023, "Old Site"),
         "Old Site \"Start\" Berry 3": AdvData(69000024, "Old Site"),
@@ -52,6 +55,8 @@ class CelesteAdvancement(Location):
         "Old Site \"Intervention\" Berry 8": AdvData(69000039, "Old Site"),
         "Old Site \"Awake\" Berry": AdvData(69000040, "Old Site"),
         "Resurrections": AdvData(69000041, "Old Site"),
+
+        #Celestial Resort 69000042-69000068
         "Celestial Resort \"Start\" Berry 1": AdvData(69000042, "Celestial Resort"),
         "Celestial Resort \"Start\" Berry 2": AdvData(69000043, "Celestial Resort"),
         "Celestial Resort \"Start\" Berry 3": AdvData(69000044, "Celestial Resort"),
@@ -79,6 +84,8 @@ class CelesteAdvancement(Location):
         "Celestial Resort \"Presidential Suite\" Berry 2": AdvData(69000066, "Celestial Resort"),
         "Celestial Resort \"Presidential Suite\" Berry 3": AdvData(69000067, "Celestial Resort"),
         "Scattered And Lost": AdvData(69000068, "Celestial Resort"),
+
+        # Golden Ridge 69000069-69000099
         "Golden Ridge \"Start\" Berry 1": AdvData(69000069, "Golden Ridge"),
         "Golden Ridge \"Start\" Berry 2": AdvData(69000070, "Golden Ridge"),
         "Golden Ridge \"Start\" Berry 3": AdvData(69000071, "Golden Ridge"),
@@ -110,6 +117,8 @@ class CelesteAdvancement(Location):
         "Golden Ridge \"Cliff Face\" Berry 4": AdvData(69000097, "Golden Ridge"),
         "Golden Ridge \"Cliff Face\" Berry 5": AdvData(69000098, "Golden Ridge"),
         "Eye Of The Storm": AdvData(69000099, "Golden Ridge"),
+
+        # Mirror Temple 69000100-69000132
         "Mirror Temple \"Start\" Berry 1": AdvData(69000100, "Mirror Temple"),
         "Mirror Temple \"Start\" Berry 2": AdvData(69000101, "Mirror Temple"),
         "Mirror Temple \"Start\" Berry 3": AdvData(69000102, "Mirror Temple"),
