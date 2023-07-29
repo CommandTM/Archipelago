@@ -151,5 +151,9 @@ class CelesteAdvancement(Location):
         "Mirror Temple \"Search\" Berry 5": AdvData(69000129, "Mirror Temple"),
         "Mirror Temple \"Search\" Berry 6": AdvData(69000130, "Mirror Temple"),
         "Mirror Temple \"Rescue\" Berry": AdvData(69000131, "Mirror Temple"),
-        "Quiet And Falling": AdvData(69000132, "Mirror Temple")
+        "Quiet And Falling": AdvData(69000132, "Mirror Temple"),
+
+        # Reflecction 69000133-69000134
+        "Reflections B-Side Cassette": AdvData(69000133, "Reflections"),
+        "Heavy And Frail": AdvData(69000134, "Reflections"),
     }
