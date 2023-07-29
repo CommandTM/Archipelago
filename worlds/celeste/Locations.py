@@ -157,3 +157,22 @@ class CelesteAdvancement(Location):
         "Reflections B-Side Cassette": AdvData(69000133, "Reflections"),
         "Heavy And Frail": AdvData(69000134, "Reflections"),
     }
+
+    exclusion_table = {
+        "Cassettes": {
+            "Forsaken City B-Side Cassette",
+            "Old Site B-Side Cassette",
+            "Celestial Resort B-Side Cassette",
+            "Golden Ridge B-Side Cassette",
+            "Mirror Temple B-Side Cassette",
+            "Reflections B-Side Cassette"
+        },
+        "Crystal Hearts": {
+            "Pointless Machine",
+            "Resurrections",
+            "Scattered And Lost",
+            "Eye Of The Storm",
+            "Quiet And Falling",
+            "Heavy And Frail"
+        }
+    }
