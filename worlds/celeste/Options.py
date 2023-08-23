@@ -6,42 +6,42 @@ class OldSiteCost(Range):
     display_name = "Old Site Cost"
     default = 10
     range_start = 1
-    range_end = 30
+    range_end = 20
 
 class CelestialResortCost(Range):
     """How many strawberries it would take to unlock Celstial Resort"""
     display_name = "Celestial Resort Cost"
     default = 30
     range_start = 5
-    range_end = 60
+    range_end = 38
 
 class GoldenRidgeCost(Range):
     """How many strawberries it would take to unlock Golden Ridge"""
     display_name = "Golden Ridge Cost"
     default = 50
     range_start = 10
-    range_end = 90
+    range_end = 63
 
 class MirrorTempleCost(Range):
     """How many strawberries it would take to unlock Mirror Temple"""
     display_name = "Mirror Temple Cost"
     default = 70
     range_start = 15
-    range_end = 120
+    range_end = 92
 
 class ResurectionsCost(Range):
     """How many strawberries it would take to unlock Resurections"""
     display_name = "Resurections Cost"
     default = 90
     range_start = 20
-    range_end = 150
+    range_end = 123
 
 class SummitCost(Range):
     """How many strawberries it would take to unlock Summit"""
     display_name = "Summit Cost"
     default = 110
     range_start = 25
-    range_end = 170
+    range_end = 123
 
 class CassetteRandomize(Toggle):
     """Should B-Side Cassettes be randomized"""
