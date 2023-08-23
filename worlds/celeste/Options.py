@@ -61,7 +61,7 @@ class JewelsRandomize(Toggle):
 celeste_options: typing.Dict[str, type(Option)] = {
     "old_site_cost": OldSiteCost,
     "celestial_resort_cost": CelestialResortCost,
-    "old_site_cost": GoldenRidgeCost,
+    "golden_ridge_cost": GoldenRidgeCost,
     "mirror_temple_cost": MirrorTempleCost,
     "resurections_cost": ResurectionsCost,
     "summit_cost": SummitCost,
