@@ -23,9 +23,9 @@ celeste_regions = [
 mandatory_connections = [
     ("City Entrance", "Forsaken City"),
     ("Site Entrance", "Old Site"),
-    ("Resort Entrance", "Celestial Resort")
+    ("Resort Entrance", "Celestial Resort"),
     ("Ridge Entrance", "Golden Ridge"),
     ("Temple Entrance", "Mirror Temple"),
-    ("Reflect Entrance", "Reflections")
+    ("Reflect Entrance", "Reflections"),
     ("Summit Entrance", "Summit")
 ]

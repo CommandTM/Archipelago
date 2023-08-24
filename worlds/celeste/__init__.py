@@ -1,12 +1,10 @@
-from typing import Dict, Any, Iterable, Optional, Union
 from BaseClasses import Tutorial, Item, Region, Entrance
 from worlds.AutoWorld import World, WebWorld
-from .Items import CelesteItem, item_table, ItemData, create_items
-from .Locations import advancement_table, exclusion_table, CelesteAdvancement
-from .Options import Celeste_options, CelesteOptions, fetch_options
+from .Items import CelesteItem, item_table
+from .Locations import CelesteAdvancement, advancement_table, exclusion_table
+from .Options import celeste_options
 from .Rules import set_rules
-from .Regions import create_regions, celeste_regions, link_celeste_areas
-from . import Options
+from .Regions import celeste_regions, link_celeste_areas
 
 class CelesteWeb(WebWorld):
     tutorials = [Tutorial(
@@ -32,11 +30,12 @@ class CelesteWorld(World):
     web = CelesteWeb()
 
     item_name_to_id = {name: data.code for name, data in item_table.items()}
-    location_name_to_id = advancement_table
+    location_name_to_id = {name: data.id for name, data in advancement_table.items()}
+
 
     data_version = 1
 
-    option_definitions = Celeste_options
+    option_definitions = celeste_options
 
     def create_items(self):
         itempool = []
@@ -48,13 +47,6 @@ class CelesteWorld(World):
         if self.multiworld.jewel_random[self.player] == 1:
             itempool += ["Nothing"]
             itempool += ["Something"]
-        exclusion_pool = set()
-        if not self.multiworld.cassettes_random[self.player]:
-            exclusion_pool.update(exclusion_table["Cassettes"])
-        if not self.multiworld.crystal_heart_random[self.player]:
-            exclusion_pool.update(exclusion_table["Crystal Hearts"])
-        if not self.multiworld.jewel_random[self.player]:
-            exclusion_pool.update(exclusion_table["7a Jewels"])
 
         itempool = [item for item in map(lambda name: self.create_item(name), itempool)]
         self.multiworld.itempool += itempool
