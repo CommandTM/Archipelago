@@ -11,7 +11,7 @@ from . import Options
 class CelesteWeb(WebWorld):
     tutorials = [Tutorial(
         "Multiworld Setup Tutorial",
-        "A guide to setting up the Archipelago Celeste game on your computer.",
+        "A guide to making a computer play Celeste that just so happens to have Archipelago combatibility.",
         "English",
         "setup_en.md",
         "setup/en",
