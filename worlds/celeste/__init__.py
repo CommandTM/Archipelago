@@ -48,7 +48,6 @@ class CelesteWorld(World):
         if self.multiworld.jewel_random[self.player] == 1:
             itempool += ["Nothing"]
             itempool += ["Something"]
-        itempool = [item for item in map(lambda name: self.create_item(name), itempool)]
         exclusion_pool = set()
         if not self.multiworld.cassettes_random[self.player]:
             exclusion_pool.update(exclusion_table["Cassettes"])
@@ -56,12 +55,9 @@ class CelesteWorld(World):
             exclusion_pool.update(exclusion_table["Crystal Hearts"])
         if not self.multiworld.jewel_random[self.player]:
             exclusion_pool.update(exclusion_table["7a Jewels"])
+
+        itempool = [item for item in map(lambda name: self.create_item(name), itempool)]
         self.multiworld.itempool += itempool
-    
-    def create_item(self, name: str) -> Item:
-        item_data = item_table[name]
-        item = CelesteItem(name, item_data.classification, item_data.code, self.player)
-        return item
     
     def set_rules(self):
         set_rules(self.multiworld, self.player)
@@ -94,3 +90,8 @@ class CelesteWorld(World):
             "crystal_heart_random": self.multiworld.crystal_heart_random[self.player].value,
             "jewel_random": self.multiworld.jewel_random[self.player].value,
         }
+    
+    def create_item(self, name: str) -> Item:
+        item_data = item_table[name]
+        item = CelesteItem(name, item_data.classification, item_data.code, self.player)
+        return item
