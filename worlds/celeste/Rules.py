@@ -11,6 +11,6 @@ def set_rules(multiworld: MultiWorld, player: int):
     set_rule(multiworld.get_entrance("Temple Entrance", player),
         lambda state: (state.has("Strawberry", player, state.multiworld.mirror_temple_cost[player])))
     set_rule(multiworld.get_entrance("Reflect Entrance", player),
-        lambda state: (state.has("Strawberry", player, state.multiworld.reflections_cost[player])))
+        lambda state: (state.has("Strawberry", player, state.multiworld.resurections_cost[player])))
     set_rule(multiworld.get_entrance("Summit Entrance", player),
         lambda state: (state.has("Strawberry", player, state.multiworld.summit_cost[player])))

@@ -1,6 +1,6 @@
 from BaseClasses import Tutorial, Item, Region, Entrance
 from worlds.AutoWorld import World, WebWorld
-from .Items import CelesteItem, item_table
+from .Items import CelesteItem, item_table, item_frequencies
 from .Locations import CelesteAdvancement, advancement_table, exclusion_table
 from .Options import celeste_options
 from .Rules import set_rules
@@ -39,14 +39,14 @@ class CelesteWorld(World):
 
     def create_items(self):
         itempool = []
-        itempool += ["Strawberry"]
+        itempool += ["Strawberry"] * item_frequencies["Strawberry"]
         if self.multiworld.cassettes_random[self.player] == 1:
-            itempool += ["Cassette"]
+            itempool += ["Cassette"] * item_frequencies["Cassette"]
         if self.multiworld.crystal_heart_random[self.player] == 1:
-            itempool += ["Crystal Heart"]
+            itempool += ["Crystal Heart"] * item_frequencies["Crystal Heart"]
         if self.multiworld.jewel_random[self.player] == 1:
+            itempool += ["Something"] * item_frequencies["Something"]
             itempool += ["Nothing"]
-            itempool += ["Something"]
 
         itempool = [item for item in map(lambda name: self.create_item(name), itempool)]
         self.multiworld.itempool += itempool
@@ -58,8 +58,8 @@ class CelesteWorld(World):
         def CelesteRegion(region_name: str, exits=[]):
             ret = Region(region_name, self.player, self.multiworld)
             ret.locations = [CelesteAdvancement(self.player, loc_name, loc_data.id, ret)
-                             for loc_name, loc_data in advancement_table.items()
-                             if loc_data.region == region_name and
+                            for loc_name, loc_data in advancement_table.items()
+                            if loc_data.region == region_name and
                                 loc_name not in exclusion_table["Cassettes"] and
                                 loc_name not in exclusion_table["Crystal Hearts"] and
                                 loc_name not in exclusion_table["7a Jewels"]]
