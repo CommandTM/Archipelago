@@ -79,7 +79,7 @@ advancement_table = {
     "Celestial Resort \"Elevator Shaft\" Berry 2": AdvData(69000061, "Celestial Resort"),
     "Celestial Resort \"Elevator Shaft\" Berry 3": AdvData(69000062, "Celestial Resort"),
     "Celestial Resort \"Elevator Shaft\" Berry 4": AdvData(69000063, "Celestial Resort"),
-    "Celestial Resort B-Side Cassette": AdvData(69000064, "Celestial"),
+    "Celestial Resort B-Side Cassette": AdvData(69000064, "Celestial Resort"),
     "Celestial Resort \"Presidential Suite\" Berry 1": AdvData(69000065, "Celestial Resort"),
     "Celestial Resort \"Presidential Suite\" Berry 2": AdvData(69000066, "Celestial Resort"),
     "Celestial Resort \"Presidential Suite\" Berry 3": AdvData(69000067, "Celestial Resort"),

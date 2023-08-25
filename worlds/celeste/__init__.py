@@ -46,7 +46,15 @@ class CelesteWorld(World):
             itempool += ["Crystal Heart"] * item_frequencies["Crystal Heart"]
         if self.multiworld.jewel_random[self.player] == 1:
             itempool += ["Something"] * item_frequencies["Something"]
-            itempool += ["Nothing"]
+            itempool += ["Nothing"] * item_frequencies["Nothing"]
+        
+        exclusion_pool = set()
+        if self.multiworld.cassettes_random[self.player] == 1:
+            exclusion_pool.update(exclusion_table["Cassettes"])
+        if self.multiworld.crystal_heart_random[self.player] == 1:
+            exclusion_pool.update(exclusion_table["Crystal Hearts"])
+        if self.multiworld.jewel_random[self.player] == 1:
+            exclusion_pool.update(exclusion_table["7a Jewels"])
 
         itempool = [item for item in map(lambda name: self.create_item(name), itempool)]
         self.multiworld.itempool += itempool
@@ -59,13 +67,7 @@ class CelesteWorld(World):
             ret = Region(region_name, self.player, self.multiworld)
             ret.locations = [CelesteAdvancement(self.player, loc_name, loc_data.id, ret)
                             for loc_name, loc_data in advancement_table.items()
-                            if loc_data.region == region_name and
-                                loc_name not in exclusion_table["Cassettes"] and
-                                self.multiworld.cassettes_random[self.player] == 0 or
-                                loc_name not in exclusion_table["Crystal Hearts"] and
-                                self.multiworld.crystal_heart_random[self.player] == 0 or
-                                loc_name not in exclusion_table["7a Jewels"] and
-                                self.multiworld.jewel_random[self.player] == 0]
+                            if loc_data.region == region_name]
             for exit in exits:
                 ret.exits.append(Entrance(self.player, exit, ret))
             return ret

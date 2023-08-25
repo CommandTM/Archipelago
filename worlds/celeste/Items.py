@@ -20,5 +20,6 @@ item_frequencies = {
     "Strawberry": 170,
     "Cassette": 7,
     "Crystal Heart": 7,
+    "Nothing": 5,
     "Something": 1
 }
