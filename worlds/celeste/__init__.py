@@ -61,8 +61,11 @@ class CelesteWorld(World):
                             for loc_name, loc_data in advancement_table.items()
                             if loc_data.region == region_name and
                                 loc_name not in exclusion_table["Cassettes"] and
+                                self.multiworld.cassettes_random[self.player] == 0 or
                                 loc_name not in exclusion_table["Crystal Hearts"] and
-                                loc_name not in exclusion_table["7a Jewels"]]
+                                self.multiworld.crystal_heart_random[self.player] == 0 or
+                                loc_name not in exclusion_table["7a Jewels"] and
+                                self.multiworld.jewel_random[self.player] == 0]
             for exit in exits:
                 ret.exits.append(Entrance(self.player, exit, ret))
             return ret
