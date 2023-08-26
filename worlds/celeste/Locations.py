@@ -215,31 +215,31 @@ advancement_table = {
     "Pink Sunrise": AdvData(69000189, "Summit")
     }
 
-exclusion_table = {
-    "Cassettes": {
-        "Forsaken City B-Side Cassette",
-        "Old Site B-Side Cassette",
-        "Celestial Resort B-Side Cassette",
-        "Golden Ridge B-Side Cassette",
-        "Mirror Temple B-Side Cassette",
-        "Reflections B-Side Cassette",
-        "Summit B-Side Cassette"
-    },
-    "Crystal Hearts": {
-        "Pointless Machine",
-        "Resurrections",
-        "Scattered And Lost",
-        "Eye Of The Storm",
-        "Quiet And Falling",
-        "Heavy And Frail",
-        "Pink Sunrise"
-    },
-        "7a Jewels": {
-        "Star Jewel",
-        "Sapphire Jewel",
-        "Emerald Jewel",
-        "Gold Jewel",
-        "Diamond Jewel",
-        "Pearl Jewel"
-    }
-    }
+tape_locations = {
+    "Forsaken City B-Side Cassette",
+    "Old Site B-Side Cassette",
+    "Celestial Resort B-Side Cassette",
+    "Golden Ridge B-Side Cassette",
+    "Mirror Temple B-Side Cassette",
+    "Reflections B-Side Cassette",
+    "Summit B-Side Cassette"
+}
+
+heart_locations = {
+    "Pointless Machine",
+    "Resurrections",
+    "Scattered And Lost",
+    "Eye Of The Storm",
+    "Quiet And Falling",
+    "Heavy And Frail",
+    "Pink Sunrise"
+}
+
+jewel_locations = {
+    "Star Jewel",
+    "Sapphire Jewel",
+    "Emerald Jewel",
+    "Gold Jewel",
+    "Diamond Jewel",
+    "Pearl Jewel"
+}

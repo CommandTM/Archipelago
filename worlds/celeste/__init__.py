@@ -1,7 +1,8 @@
 from BaseClasses import Tutorial, Item, Region, Entrance
 from worlds.AutoWorld import World, WebWorld
+from worlds.generic.Rules import exclusion_rules
 from .Items import CelesteItem, item_table, item_frequencies
-from .Locations import CelesteAdvancement, advancement_table, exclusion_table
+from .Locations import CelesteAdvancement, advancement_table, tape_locations, heart_locations, jewel_locations
 from .Options import celeste_options
 from .Rules import set_rules
 from .Regions import celeste_regions, link_celeste_areas
@@ -38,23 +39,30 @@ class CelesteWorld(World):
     option_definitions = celeste_options
 
     def create_items(self):
-        itempool = []
-        itempool += ["Strawberry"] * item_frequencies["Strawberry"]
-        if self.multiworld.cassettes_random[self.player] == 1:
-            itempool += ["Cassette"] * item_frequencies["Cassette"]
-        if self.multiworld.crystal_heart_random[self.player] == 1:
-            itempool += ["Crystal Heart"] * item_frequencies["Crystal Heart"]
-        if self.multiworld.jewel_random[self.player] == 1:
-            itempool += ["Something"] * item_frequencies["Something"]
-            itempool += ["Nothing"] * item_frequencies["Nothing"]
-        
         exclusion_pool = set()
         if self.multiworld.cassettes_random[self.player] == 1:
-            exclusion_pool.update(exclusion_table["Cassettes"])
+            exclusion_pool.update(tape_locations)
         if self.multiworld.crystal_heart_random[self.player] == 1:
-            exclusion_pool.update(exclusion_table["Crystal Hearts"])
+            exclusion_pool.update(heart_locations)
         if self.multiworld.jewel_random[self.player] == 1:
-            exclusion_pool.update(exclusion_table["7a Jewels"])
+            exclusion_pool.update(jewel_locations)
+        exclusion_rules(self.multiworld, self.player, exclusion_pool)
+        
+        itempool = []
+        itempool += ["Strawberry"] * item_frequencies["Strawberry"]
+        if self.multiworld.cassettes_random[self.player] == 0:
+            itempool += ["Cassette"] * item_frequencies["Cassette"]
+        else:
+            itempool += ["Nothing"] * item_frequencies["Cassette"]
+        if self.multiworld.crystal_heart_random[self.player] == 0:
+            itempool += ["Crystal Heart"] * item_frequencies["Crystal Heart"]
+        else:
+            itempool += ["Nothing"] * item_frequencies["Crystal Heart"]
+        if self.multiworld.jewel_random[self.player] == 0:
+            itempool += ["Something"] * item_frequencies["Something"]
+            itempool += ["Nothing"] * item_frequencies["Nothing"]
+        else:
+            itempool += ["Nothing"] * 6
 
         itempool = [item for item in map(lambda name: self.create_item(name), itempool)]
         self.multiworld.itempool += itempool

@@ -45,18 +45,18 @@ class SummitCost(Range):
 
 class CassetteRandomize(Toggle):
     """Should B-Side Cassettes be randomized"""
-    display_name = "Randomize B-Side Cassettes"
-    default = 1
+    display_name = "Exclude B-Side Cassettes"
+    default = 0
 
 class CrystalHeartsRandomize(Toggle):
     """Should Crystal Hearts be randomized"""
-    display_name = "Randomize Crystal Hearts"
-    default = 1
+    display_name = "Exclude Crystal Hearts"
+    default = 0
 
 class JewelsRandomize(Toggle):
     """Should the Jewels in 7a be randomized"""
-    display_name = "Randomize Jewels"
-    default = 1
+    display_name = "Exclude 7a Jewels"
+    default = 0
 
 celeste_options: typing.Dict[str, type(Option)] = {
     "old_site_cost": OldSiteCost,
