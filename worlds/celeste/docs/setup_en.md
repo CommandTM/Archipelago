@@ -26,5 +26,5 @@ the [Celeste Settings Page](/games/Celeste/player-settings).
 1. Navigate to your saves folder inside the game directory.
 2. Find the `modsettings-APCeleste.celeste` file and open it inside a text editor.
 3. Change `ArchipelagoAddress`, `ArchipelagoPort`, and `ArchipelagoSlot` to match with your Multiworld.
-   - If your Multiworld has a password, change `ArchipelagoPassword`, otherwise leave it blank.
+   - If your Multiworld has a password, change `ArchipelagoPasswordToggle` to true and set `ArchipelagoPassword`, otherwise leave it blank.
 4. Launch Celeste with Everest and your game should connect on start-up.
