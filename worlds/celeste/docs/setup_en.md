@@ -7,7 +7,6 @@
 ## Mod Installation
 1. Download and install Everest using [their guide](https://everestapi.github.io/#installing-everest).
 2. Drag the latest stable release of the AP mod into your mods folder.
-3. Launch the game once to initalize the mod.
 
 ## Configuring your YAML file
 
@@ -23,8 +22,8 @@ you can customize your settings by visiting
 the [Celeste Settings Page](/games/Celeste/player-settings).
 
 ## Connecting to the Multiworld
-1. Navigate to your saves folder inside the game directory.
-2. Find the `modsettings-APCeleste.celeste` file and open it inside a text editor.
-3. Change `ArchipelagoAddress`, `ArchipelagoPort`, and `ArchipelagoSlot` to match with your Multiworld.
-   - If your Multiworld has a password, change `ArchipelagoPasswordToggle` to true and set `ArchipelagoPassword`, otherwise leave it blank.
-4. Launch Celeste with Everest and your game should connect on start-up.
+1. Launch Everest with the mod enabled.
+2. Find the mod's settings under the `Mod Settings` tab.
+3. Change `Archipelago Address`, `Archipelago Port`, and `Archipelago Slot` to match with your Multiworld.
+   - If your Multiworld has a password, change `Archipelago Password Toggle` to true and set `Archipelago Password`, otherwise leave it blank.
+4. Restart Everest after saving the options.
