@@ -1,4 +1,4 @@
-from typings import dict
+from typing import Dict
 
 from BaseClasses import Tutorial
 from ..AutoWorld import WebWorld, World
@@ -22,7 +22,7 @@ class BK_PicrossWorld(World):
     Play Picross while BKed to gain useful hints
     """
     game = "Picross"
-    web = BK_PudokuWebWorld()
+    web = BK_PicrossWebWord()
     data_version = 1
 
     item_name_to_id: Dict[str, int] = {}
