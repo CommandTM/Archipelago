@@ -2,7 +2,7 @@ from BaseClasses import Tutorial, Item, Region, Entrance
 from worlds.AutoWorld import World, WebWorld
 from worlds.generic.Rules import exclusion_rules
 from .Items import CelesteItem, item_table, item_frequencies
-from .Locations import CelesteAdvancement, advancement_table, tape_locations, heart_locations, jewel_locations
+from .Locations import CelesteAdvancement, advancement_table, tape_locations, heart_locations
 from .Options import celeste_options
 from .Rules import set_rules
 from .Regions import celeste_regions, link_celeste_areas
@@ -10,11 +10,11 @@ from .Regions import celeste_regions, link_celeste_areas
 class CelesteWeb(WebWorld):
     tutorials = [Tutorial(
         "Multiworld Setup Tutorial",
-        "A guide to making a computer play Celeste that just so happens to have Archipelago combatibility.",
+        "A guide to making a computer play Celeste that just so happens to have Archipelago compatibility.",
         "English",
         "setup_en.md",
         "setup/en",
-        ["Probably Starlord"]
+        ["CommandTM"]
     )]
     theme="ice"
 
@@ -33,8 +33,7 @@ class CelesteWorld(World):
     item_name_to_id = {name: data.code for name, data in item_table.items()}
     location_name_to_id = {name: data.id for name, data in advancement_table.items()}
 
-
-    data_version = 1
+    data_version = 2
 
     option_definitions = celeste_options
 
@@ -44,8 +43,6 @@ class CelesteWorld(World):
             exclusion_pool.update(tape_locations)
         if self.multiworld.crystal_heart_random[self.player] == 1:
             exclusion_pool.update(heart_locations)
-        if self.multiworld.jewel_random[self.player] == 1:
-            exclusion_pool.update(jewel_locations)
         exclusion_rules(self.multiworld, self.player, exclusion_pool)
         
         itempool = []
@@ -58,11 +55,6 @@ class CelesteWorld(World):
             itempool += ["Crystal Heart"] * item_frequencies["Crystal Heart"]
         else:
             itempool += ["Nothing"] * item_frequencies["Crystal Heart"]
-        if self.multiworld.jewel_random[self.player] == 0:
-            itempool += ["Something"] * item_frequencies["Something"]
-            itempool += ["Nothing"] * item_frequencies["Nothing"]
-        else:
-            itempool += ["Nothing"] * 6
 
         itempool = [item for item in map(lambda name: self.create_item(name), itempool)]
         self.multiworld.itempool += itempool
@@ -92,8 +84,7 @@ class CelesteWorld(World):
             "resurections_cost": self.multiworld.resurections_cost[self.player].value,
             "summit_cost": self.multiworld.summit_cost[self.player].value,
             "cassettes_random": self.multiworld.cassettes_random[self.player].value,
-            "crystal_heart_random": self.multiworld.crystal_heart_random[self.player].value,
-            "jewel_random": self.multiworld.jewel_random[self.player].value,
+            "crystal_heart_random": self.multiworld.crystal_heart_random[self.player].value
         }
     
     def create_item(self, name: str) -> Item:

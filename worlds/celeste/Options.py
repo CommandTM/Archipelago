@@ -53,11 +53,6 @@ class CrystalHeartsRandomize(Toggle):
     display_name = "Exclude Crystal Hearts"
     default = 0
 
-class JewelsRandomize(Toggle):
-    """Should the Jewels in 7a be randomized"""
-    display_name = "Exclude 7a Jewels"
-    default = 0
-
 celeste_options: typing.Dict[str, type(Option)] = {
     "old_site_cost": OldSiteCost,
     "celestial_resort_cost": CelestialResortCost,
@@ -67,5 +62,4 @@ celeste_options: typing.Dict[str, type(Option)] = {
     "summit_cost": SummitCost,
     "cassettes_random": CassetteRandomize,
     "crystal_heart_random": CrystalHeartsRandomize,
-    "jewel_random": JewelsRandomize,
 }
