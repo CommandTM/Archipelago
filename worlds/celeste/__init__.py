@@ -4,7 +4,7 @@ from worlds.generic.Rules import exclusion_rules
 from .Items import CelesteItem, item_table, item_frequencies
 from .Locations import CelesteAdvancement, advancement_table, tape_locations, heart_locations
 from .Options import celeste_options
-from .Rules import set_rules
+from .Rules import set_rules, set_completion_rules
 from .Regions import celeste_regions, link_celeste_areas
 
 class CelesteWeb(WebWorld):
@@ -61,6 +61,7 @@ class CelesteWorld(World):
     
     def set_rules(self):
         set_rules(self.multiworld, self.player)
+        set_completion_rules(self.multiworld, self.player)
     
     def create_regions(self):
         def CelesteRegion(region_name: str, exits=[]):

@@ -14,3 +14,8 @@ def set_rules(multiworld: MultiWorld, player: int):
         lambda state: (state.has("Strawberry", player, state.multiworld.resurections_cost[player])))
     set_rule(multiworld.get_entrance("Summit Entrance", player),
         lambda state: (state.has("Strawberry", player, state.multiworld.summit_cost[player])))
+
+def set_completion_rules(multiworld: MultiWorld, player: int):
+    completion_requirements = lambda state: state.can_reach("Summit Entrance", "Entrance", player)
+
+    multiworld.completion_condition[player] = lambda state: completion_requirements(state)
