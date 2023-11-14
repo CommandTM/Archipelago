@@ -137,7 +137,7 @@ all_locations = {
 
 exclusion_table = {
     "wrench": {
-    "Adjustable Wrench"
+        "Adjustable Wrench"
     },
     "mapDisruptors": {
         "Abandoned Wastes: Map Disruptor 01",
