@@ -55,7 +55,7 @@ all_items = {
 }
 
 # Frequency Tables
-required = {
+requiredItems = {
     "Electro-Magnetism": 1,
     "Body Modifier": 1,
     "Bulblet": 1,

@@ -37,6 +37,7 @@ class deathLink(Toggle):
     display_name = "Death Link"
 
 
+@dataclass
 class HaikuOptions(PerGameCommonOptions):
     dark_room_logic: darkRoomLogic
     map_disruptors: shuffleMapDisruptors
