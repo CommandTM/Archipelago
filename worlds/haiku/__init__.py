@@ -1,7 +1,7 @@
 from BaseClasses import Item
 from worlds.AutoWorld import WebWorld, World
 from .Items import fillItemTable, item_table, HaikuItem
-from .data.ItemDict import requiredItems
+from .data.ItemDict import requiredItems, mapDisruptors
 from .Locations import advancement_table
 from .Locations import fillAdvancementTable
 from .Options import HaikuOptions
@@ -33,6 +33,9 @@ class HaikuWorld(World):
         itempool = []
         for name, num in requiredItems.items():
             itempool += [name] * num
+        if self.options.map_disruptors:
+            for name, num in mapDisruptors.items():
+                itempool += [name] * num
 
         itempool = [item for item in map(lambda name: self.create_item(name), itempool)]
         self.multiworld.itempool += itempool

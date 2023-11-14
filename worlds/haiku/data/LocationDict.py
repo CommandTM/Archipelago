@@ -84,6 +84,22 @@ all_locations = {
     "Sunken Wastes: Rusty Key": "Sunken Wastes",
     "Factory Facility: Rusty Key": "Factory Facility",
     # endregion
+    # region Map Disruptors
+    "Abandoned Wastes: Map Disruptor 01": "Abandoned Wastes",
+    "Abandoned Wastes: Map Disruptor 02": "Abandoned Wastes",
+    "Central Core: Map Disruptor 01": "Central Core",
+    "Central Core: Map Disruptor 02": "Central Core",
+    "Pinion's Expanse: Map Disruptor": "Pinion's Expanse",
+    "Incinerator Burner: Map Disruptor": "Incinerator Burner",
+    "Water Ducts: Map Disruptor": "Water Ducts",
+    "Factory Facility: Map Disruptor 01": "Factory Facility",
+    "Factory Facility: Map Disruptor 02": "Factory Facility",
+    "Blazing Furnace: Map Disruptor": "Blazing Furnace",
+    "Sunken Wastes: Map Disruptor": "Sunken Wastes",
+    "Forgotten Ruins: Map Disruptor": "Forgotten Ruins",
+    "The Last Bunker: Map Disruptor 01": "The Last Bunker",
+    "The Last Bunker: Map Disruptor 02": "The Last Bunker",
+    # endregion
     # region Various
     "Electric Key": "Central Core",
     "Cassette Tape": "The Last Bunker",

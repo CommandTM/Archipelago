@@ -42,6 +42,22 @@ all_items = {
     "Ferromagnetic": ItemClassification.useful,
     "Map Sweeper": ItemClassification.useful,
     # endregion
+    # region Map Disruptors
+    "Abandoned Wastes: Map Disruptor 01": ItemClassification.useful,
+    "Abandoned Wastes: Map Disruptor 02": ItemClassification.useful,
+    "Central Core: Map Disruptor 01": ItemClassification.useful,
+    "Central Core: Map Disruptor 02": ItemClassification.useful,
+    "Pinion's Expanse: Map Disruptor": ItemClassification.useful,
+    "Incinerator Burner: Map Disruptor": ItemClassification.useful,
+    "Water Ducts: Map Disruptor": ItemClassification.useful,
+    "Factory Facility: Map Disruptor 01": ItemClassification.useful,
+    "Factory Facility: Map Disruptor 02": ItemClassification.useful,
+    "Blazing Furnace: Map Disruptor": ItemClassification.useful,
+    "Sunken Wastes: Map Disruptor": ItemClassification.useful,
+    "Forgotten Ruins: Map Disruptor": ItemClassification.useful,
+    "The Last Bunker: Map Disruptor 01": ItemClassification.useful,
+    "The Last Bunker: Map Disruptor 02": ItemClassification.useful,
+    # endregion
     # region Various
     "Power Cell": ItemClassification.useful,
     "Health Fragment": ItemClassification.useful,
@@ -101,4 +117,21 @@ requiredItems = {
     "Green Skull": 1,
     "Red Skull": 1,
     "Liquid Coolant": 3
+}
+
+mapDisruptors = {
+    "Abandoned Wastes: Map Disruptor 01": 1,
+    "Abandoned Wastes: Map Disruptor 02": 1,
+    "Central Core: Map Disruptor 01": 1,
+    "Central Core: Map Disruptor 02": 1,
+    "Pinion's Expanse: Map Disruptor": 1,
+    "Incinerator Burner: Map Disruptor": 1,
+    "Water Ducts: Map Disruptor": 1,
+    "Factory Facility: Map Disruptor 01": 1,
+    "Factory Facility: Map Disruptor 02": 1,
+    "Blazing Furnace: Map Disruptor": 1,
+    "Sunken Wastes: Map Disruptor": 1,
+    "Forgotten Ruins: Map Disruptor": 1,
+    "The Last Bunker: Map Disruptor 01": 1,
+    "The Last Bunker: Map Disruptor 02": 1
 }
