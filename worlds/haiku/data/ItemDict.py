@@ -9,5 +9,7 @@ all_items = {
     "Jump Boosters": ItemClassification.progression,
     "String And Hook": ItemClassification.progression,
     "Space Disruptor": ItemClassification.progression,
-    "Power Bomb": ItemClassification.progression
+    "Power Bomb": ItemClassification.progression,
+    "Adjustable Wrench": ItemClassification.useful,
+    "Goldcrest Whistle": ItemClassification.useful
 }

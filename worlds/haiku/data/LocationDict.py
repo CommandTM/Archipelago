@@ -7,5 +7,7 @@ all_locations = {
     "Jump Boosters": "Water Ducts",
     "String And Hook": "Central Core",
     "Space Disruptor": "Forgotten Ruins",
-    "Power Bomb": "Central Core"
+    "Power Bomb": "Central Core",
+    "Adjustable Wrench": "Abandoned Wastes",
+    "Goldcrest Whistle": "Abandoned Wastes"
 }
