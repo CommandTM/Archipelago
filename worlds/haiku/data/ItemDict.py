@@ -59,6 +59,15 @@ all_items = {
     "The Last Bunker: Map Disruptor 02": ItemClassification.useful,
     # endregion
     # region Train Stations
+    "Abandoned Wastes: Train Station": ItemClassification.useful,
+    "Central Core: Train Station": ItemClassification.useful,
+    "Pinion's Expanse: Train Station": ItemClassification.useful,
+    "Water Ducts: Train Station": ItemClassification.useful,
+    "Factory Facility: Train Station": ItemClassification.useful,
+    "Sunken Wastes: Train Station": ItemClassification.useful,
+    "Forgotten Ruins: Train Station": ItemClassification.useful,
+    "The Last Bunker: Train Station": ItemClassification.useful,
+    # endregion
     # region Various
     "Power Cell": ItemClassification.useful,
     "Health Fragment": ItemClassification.useful,
@@ -67,7 +76,10 @@ all_items = {
     "Cassette Tape": ItemClassification.useful,
     "Green Skull": ItemClassification.useful,
     "Red Skull": ItemClassification.useful,
-    "Liquid Coolant": ItemClassification.useful
+    "Liquid Coolant": ItemClassification.useful,
+    "Red Chip Socket": ItemClassification.useful,
+    "Blue Chip Socket": ItemClassification.useful,
+    "Green Chip Socket": ItemClassification.useful
     # endregion
 }
 
@@ -134,4 +146,15 @@ mapDisruptors = {
     "Forgotten Ruins: Map Disruptor": 1,
     "The Last Bunker: Map Disruptor 01": 1,
     "The Last Bunker: Map Disruptor 02": 1
+}
+
+trainStations = {
+    "Abandoned Wastes: Train Station": 1,
+    "Central Core: Train Station": 1,
+    "Pinion's Expanse: Train Station": 1,
+    "Water Ducts: Train Station": 1,
+    "Factory Facility: Train Station": 1,
+    "Sunken Wastes: Train Station": 1,
+    "Forgotten Ruins: Train Station": 1,
+    "The Last Bunker: Train Station": 1
 }

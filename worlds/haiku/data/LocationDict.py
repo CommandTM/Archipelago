@@ -100,6 +100,16 @@ all_locations = {
     "The Last Bunker: Map Disruptor 01": "The Last Bunker",
     "The Last Bunker: Map Disruptor 02": "The Last Bunker",
     # endregion
+    # region Train Stations
+    "Abandoned Wastes: Train Station": "Abandoned Wastes",
+    "Central Core: Train Station": "Central Core",
+    "Pinion's Expanse: Train Station": "Pinion's Expanse",
+    "Water Ducts: Train Station": "Water Ducts",
+    "Factory Facility: Train Station": "Factory Facility",
+    "Sunken Wastes: Train Station": "Sunken Wastes",
+    "Forgotten Ruins: Train Station": "Forgotten Ruins",
+    "The Last Bunker: Train Station": "The Last Bunker",
+    # endregion
     # region Various
     "Electric Key": "Central Core",
     "Cassette Tape": "The Last Bunker",
