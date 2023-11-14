@@ -125,7 +125,7 @@ all_locations = {
     "Blazing Furnace: Red Chip Socket": "Blazing Furnace",
     "Forgotten Ruins: Green Chip Socket": "Forgotten Ruins",
     "Traveling Town: Red Chip Socket": "Traveling Town",
-    "Travelign Town: BLue Chip Socket": "Traveling Town",
+    "Traveling Town: BLue Chip Socket": "Traveling Town",
     # endregion
     # region Creators
     "Electron": "Central Core",
@@ -170,7 +170,7 @@ exclusion_table = {
         "Blazing Furnace: Red Chip Socket",
         "Forgotten Ruins: Green Chip Socket",
         "Traveling Town: Red Chip Socket",
-        "Travelign Town: BLue Chip Socket"
+        "Traveling Town: BLue Chip Socket"
     },
     "creators": {
         "Electron",
