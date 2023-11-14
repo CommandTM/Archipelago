@@ -77,9 +77,16 @@ all_items = {
     "Green Skull": ItemClassification.useful,
     "Red Skull": ItemClassification.useful,
     "Liquid Coolant": ItemClassification.useful,
+    # region Chip Sockets
     "Red Chip Socket": ItemClassification.useful,
     "Blue Chip Socket": ItemClassification.useful,
-    "Green Chip Socket": ItemClassification.useful
+    "Green Chip Socket": ItemClassification.useful,
+    # endregion
+    # region Creators
+    "Electron": ItemClassification.progression,
+    "Protron": ItemClassification.progression,
+    "Neutron": ItemClassification.progression
+    # endregion
     # endregion
 }
 
@@ -163,4 +170,10 @@ chipSockets = {
     "Red Chip Socket": 2,
     "Blue Chip Socket": 2,
     "Green Chip Socket": 1
+}
+
+creators = {
+    "Electron": 1,
+    "Proton": 1,
+    "Neutron": 1
 }

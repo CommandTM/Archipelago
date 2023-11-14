@@ -125,7 +125,12 @@ all_locations = {
     "Blazing Furnace: Red Chip Socket": "Blazing Furnace",
     "Forgotten Ruins: Green Chip Socket": "Forgotten Ruins",
     "Traveling Town: Red Chip Socket": "Traveling Town",
-    "Travelign Town: BLue Chip Socket": "Traveling Town"
+    "Travelign Town: BLue Chip Socket": "Traveling Town",
+    # endregion
+    # region Creators
+    "Electron": "Central Core",
+    "Protron": "Blazing Furnace",
+    "Neutron": "The Last Bunker"
     # endregion
     # endregion
 }
