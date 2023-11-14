@@ -140,7 +140,6 @@ exclusion_table = {
     "Adjustable Wrench"
     },
     "mapDisruptors": {
-        # region ^
         "Abandoned Wastes: Map Disruptor 01",
         "Abandoned Wastes: Map Disruptor 02",
         "Central Core: Map Disruptor 01",
@@ -155,10 +154,8 @@ exclusion_table = {
         "Forgotten Ruins: Map Disruptor",
         "The Last Bunker: Map Disruptor 01",
         "The Last Bunker: Map Disruptor 02"
-        # endregion
     },
     "trainStations": {
-        # region ^
         "Abandoned Wastes: Train Station",
         "Central Core: Train Station",
         "Pinion's Expanse: Train Station",
@@ -167,22 +164,17 @@ exclusion_table = {
         "Sunken Wastes: Train Station",
         "Forgotten Ruins: Train Station",
         "The Last Bunker: Train Station"
-        # endregion
     },
     "chipSockets": {
-        # region ^
         "Water Ducts: Blue Chip Socket",
         "Blazing Furnace: Red Chip Socket",
         "Forgotten Ruins: Green Chip Socket",
         "Traveling Town: Red Chip Socket",
         "Travelign Town: BLue Chip Socket"
-        # endregion
     },
     "creators": {
-        # region ^
         "Electron",
         "Protron",
         "Neutron"
-        # endregion
     }
 }
