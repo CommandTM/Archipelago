@@ -115,8 +115,17 @@ all_locations = {
     "Cassette Tape": "The Last Bunker",
     "Green Skull": "Traveling Town",
     "Red Skull": "Ruined Surface",
+    # region Liquid Coolants
     "Water Ducts: Liquid Coolant": "Water Ducts",
     "Blazing Furnace: Liquid Coolant": "Blazing Furnace",
-    "Forgotten Ruins: Liquid Coolant": "Forgotten Ruins"
+    "Forgotten Ruins: Liquid Coolant": "Forgotten Ruins",
+    # endregion
+    # region Chip Sockets
+    "Water Ducts: Blue Chip Socket": "Water Ducts",
+    "Blazing Furnace: Red Chip Socket": "Blazing Furnace",
+    "Forgotten Ruins: Green Chip Socket": "Forgotten Ruins",
+    "Traveling Town: Red Chip Socket": "Traveling Town",
+    "Travelign Town: BLue Chip Socket": "Traveling Town"
+    # endregion
     # endregion
 }

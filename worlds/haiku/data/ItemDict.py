@@ -158,3 +158,9 @@ trainStations = {
     "Forgotten Ruins: Train Station": 1,
     "The Last Bunker: Train Station": 1
 }
+
+chipSockets = {
+    "Red Chip Socket": 2,
+    "Blue Chip Socket": 2,
+    "Green Chip Socket": 1
+}
