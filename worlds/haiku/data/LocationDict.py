@@ -1,4 +1,4 @@
-abilites = {
+all_locations = {
     "Electro-Magnetism": "Abandoned Wastes",
     "Body Modifier": "Factory Facility",
     "Bulblet": "Central Core",

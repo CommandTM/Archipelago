@@ -1,6 +1,6 @@
 from BaseClasses import ItemClassification
 
-abilites = {
+all_items = {
     "Electro-Magnetism": ItemClassification.progression,
     "Body Modifier": ItemClassification.progression,
     "Bulblet": ItemClassification.progression,
