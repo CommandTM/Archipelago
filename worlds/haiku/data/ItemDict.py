@@ -58,6 +58,7 @@ all_items = {
     "The Last Bunker: Map Disruptor 01": ItemClassification.useful,
     "The Last Bunker: Map Disruptor 02": ItemClassification.useful,
     # endregion
+    # region Train Stations
     # region Various
     "Power Cell": ItemClassification.useful,
     "Health Fragment": ItemClassification.useful,
@@ -81,7 +82,6 @@ requiredItems = {
     "String And Hook": 1,
     "Space Disruptor": 1,
     "Power Bomb": 1,
-    "Adjustable Wrench": 1,
     "Goldcrest Whistle": 1,
     "Infinity Edge": 1,
     "Electro-Emitter": 1,

@@ -33,6 +33,8 @@ class HaikuWorld(World):
         itempool = []
         for name, num in requiredItems.items():
             itempool += [name] * num
+        if self.options.wrench:
+            itempool += ["Adjustable Wrench"]
         if self.options.map_disruptors:
             for name, num in mapDisruptors.items():
                 itempool += [name] * num
