@@ -76,7 +76,7 @@ class HaikuWorld(World):
             exculsionPool.update(exclusionTable["creators"])
         # endregion
 
-        itempool += self.multiworld.random.choices(junkWeights.keys(), junkWeights.values(),
+        itempool += self.multiworld.random.choices(list(junkWeights.keys()), list(junkWeights.values()),
                                                    k=len(self.location_names) - len(itempool) - len(exculsionPool))
 
         # Converts itempool to actual items, then adds them to the Multiworld's itempool
