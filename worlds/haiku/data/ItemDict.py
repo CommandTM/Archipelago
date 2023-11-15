@@ -41,6 +41,8 @@ all_items = {
     "Protector's Capsule": ItemClassification.useful,
     "Ferromagnetic": ItemClassification.useful,
     "Map Sweeper": ItemClassification.useful,
+    "Power Enhancer": ItemClassification.useful,
+    "Power Processor": ItemClassification.useful,
     # endregion
     # region Map Disruptors
     "Abandoned Wastes: Map Disruptor 01": ItemClassification.useful,
@@ -96,7 +98,7 @@ all_items = {
 }
 
 # Frequency Tables
-requiredItems = {
+necessaryItems = {
     "Electro-Magnetism": 1,
     "Body Modifier": 1,
     "Bulblet": 1,
@@ -133,6 +135,8 @@ requiredItems = {
     "Protector's Capsule": 1,
     "Ferromagnetic": 1,
     "Map Sweeper": 1,
+    "Power Enhancer": 1,
+    "Power Processor": 1,
     "Power Cell": 24,
     "Health Fragment": 10,
     "Rusted Key": 4,

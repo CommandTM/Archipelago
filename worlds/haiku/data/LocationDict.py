@@ -7,7 +7,7 @@ all_locations = {
     "Sealant Treatment": "Central Core",
     "Jump Boosters": "Water Ducts",
     "String And Hook": "Central Core",
-    "Space Disruptor": "Sunken Depths",
+    "Space Disruptor": "Sunken Wastes",
     "Power Bomb": "Central Core",
     "Adjustable Wrench": "Abandoned Wastes",
     "Goldcrest Whistle": "Abandoned Wastes",
@@ -39,6 +39,8 @@ all_locations = {
     "Protector's Capsule": "Traveling Town",
     "Ferromagnetic": "Traveling Town",
     "Map Sweeper": "Traveling Town",
+    "Power Enhancer": "Ruined Surface",
+    "Power Processor": "Ruined Surface",
     # endregion
     # region Power Cells
     "Central Core: Power Cell 01": "Central Core",
@@ -118,7 +120,7 @@ all_locations = {
     # region Liquid Coolants
     "Water Ducts: Liquid Coolant": "Water Ducts",
     "Blazing Furnace: Liquid Coolant": "Blazing Furnace",
-    "Sunken Depths: Liquid Coolant": "Sunken Depths",
+    "Sunken Wastes: Liquid Coolant": "Sunken Wastes",
     # endregion
     # region Chip Sockets
     "Water Ducts: Blue Chip Socket": "Water Ducts",
@@ -129,7 +131,7 @@ all_locations = {
     # endregion
     # region Creators
     "Electron": "Central Core",
-    "Protron": "Blazing Furnace",
+    "Proton": "Blazing Furnace",
     "Neutron": "The Last Bunker"
     # endregion
     # endregion
@@ -174,7 +176,7 @@ exclusionTable = {
     },
     "creators": {
         "Electron",
-        "Protron",
+        "Proton",
         "Neutron"
     }
 }

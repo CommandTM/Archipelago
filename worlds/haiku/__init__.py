@@ -1,7 +1,7 @@
-from BaseClasses import Item, Region, Entrance
+from BaseClasses import Item, Region, Entrance, Tutorial
 from worlds.AutoWorld import WebWorld, World
 from .Items import fillItemTable, item_table, HaikuItem
-from .data.ItemDict import requiredItems, mapDisruptors, trainStations, chipSockets, creators, junkWeights
+from .data.ItemDict import necessaryItems, mapDisruptors, trainStations, chipSockets, creators, junkWeights
 from .data.LocationDict import exclusionTable
 from .Locations import advancement_table, fillAdvancementTable, HaikuAdvancement
 from .Options import HaikuOptions
@@ -12,6 +12,14 @@ offset = 901403403
 
 class HaikuWebWorld(WebWorld):
     theme = "dirt"
+    tutorials = [Tutorial(
+        "Multiworld Setup Tutorial",
+        "A guide to setting up Haiku, The Robot for a Multiworld game.",
+        "English",
+        "setup_en.md",
+        "setup/en",
+        ["CommandTM"]
+    )]
 
 
 class HaikuWorld(World):
@@ -34,7 +42,7 @@ class HaikuWorld(World):
         itempool = []
         exculsionPool = set()
 
-        for name, num in requiredItems.items():  # Required Items
+        for name, num in necessaryItems.items():  # Required Items
             itempool += [name] * num
 
         # region Options
