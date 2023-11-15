@@ -7,7 +7,7 @@ all_locations = {
     "Sealant Treatment": "Central Core",
     "Jump Boosters": "Water Ducts",
     "String And Hook": "Central Core",
-    "Space Disruptor": "Forgotten Ruins",
+    "Space Disruptor": "Sunken Depths",
     "Power Bomb": "Central Core",
     "Adjustable Wrench": "Abandoned Wastes",
     "Goldcrest Whistle": "Abandoned Wastes",
@@ -118,7 +118,7 @@ all_locations = {
     # region Liquid Coolants
     "Water Ducts: Liquid Coolant": "Water Ducts",
     "Blazing Furnace: Liquid Coolant": "Blazing Furnace",
-    "Forgotten Ruins: Liquid Coolant": "Forgotten Ruins",
+    "Sunken Depths: Liquid Coolant": "Sunken Depths",
     # endregion
     # region Chip Sockets
     "Water Ducts: Blue Chip Socket": "Water Ducts",

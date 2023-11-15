@@ -35,7 +35,7 @@ class HaikuWorld(World):
         for name, num in requiredItems.items():  # Required Items
             itempool += [name] * num
             
-        # region Item Options
+        # region Options
         if self.options.wrench:  # Wrench Option
             itempool += ["Adjustable Wrench"]
 
