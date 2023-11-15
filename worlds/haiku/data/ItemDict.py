@@ -85,8 +85,12 @@ all_items = {
     # region Creators
     "Electron": ItemClassification.progression,
     "Proton": ItemClassification.progression,
-    "Neutron": ItemClassification.progression
+    "Neutron": ItemClassification.progression,
     # endregion
+    # region Money
+    "$10": ItemClassification.filler,
+    "$50": ItemClassification.filler,
+    "$100": ItemClassification.filler
     # endregion
 }
 
@@ -176,4 +180,10 @@ creators = {
     "Electron": 1,
     "Proton": 1,
     "Neutron": 1
+}
+
+junkWeights = {
+    "$10": 10,
+    "$50": 5,
+    "$100": 1
 }

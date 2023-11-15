@@ -135,7 +135,7 @@ all_locations = {
     # endregion
 }
 
-exclusion_table = {
+exclusionTable = {
     "wrench": {
         "Adjustable Wrench"
     },

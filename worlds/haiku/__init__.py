@@ -1,9 +1,9 @@
 from BaseClasses import Item
 from worlds.AutoWorld import WebWorld, World
 from .Items import fillItemTable, item_table, HaikuItem
-from .data.ItemDict import requiredItems, mapDisruptors, trainStations, chipSockets, creators
-from .Locations import advancement_table
-from .Locations import fillAdvancementTable
+from .data.ItemDict import requiredItems, mapDisruptors, trainStations, chipSockets, creators, junkWeights
+from .data.LocationDict import exclusionTable
+from .Locations import advancement_table, fillAdvancementTable
 from .Options import HaikuOptions
 
 offset = 901403403
@@ -31,31 +31,45 @@ class HaikuWorld(World):
 
     def create_items(self):
         itempool = []
+        exculsionPool = set()
 
         for name, num in requiredItems.items():  # Required Items
             itempool += [name] * num
-            
+
         # region Options
         if self.options.wrench:  # Wrench Option
             itempool += ["Adjustable Wrench"]
+        else:
+            exculsionPool.update(exclusionTable["wrench"])
 
         if self.options.map_disruptors:  # Map Disruptors Option
             for name, num in mapDisruptors.items():
                 itempool += [name] * num
+        else:
+            exculsionPool.update(exclusionTable["mapDisruptors"])
 
         if self.options.train_stations:  # Train Stations Option
             for name, num in trainStations.items():
                 itempool += [name] * num
+        else:
+            exculsionPool.update(exclusionTable["trainStations"])
 
-        if self.options.chip_sockets: # Chip Sockets Option
+        if self.options.chip_sockets:  # Chip Sockets Option
             for name, num in chipSockets.items():
                 itempool += [name] * num
-                
-        if self.options.creators: # Creators Option
+        else:
+            exculsionPool.update(exclusionTable["chipSockets"])
+
+        if self.options.creators:  # Creators Option
             for name, num in creators.items():
                 itempool += [name] * num
+        else:
+            exculsionPool.update(exclusionTable["creators"])
         # endregion
-        
+
+        itempool += self.multiworld.random.choices(junkWeights.keys(), junkWeights.values(),
+                                                   k=len(self.location_names)-len(itempool)-len(exculsionPool))
+
         # Converts itempool to actual items, then adds them to the Multiworld's itempool
         itempool = [item for item in map(lambda name: self.create_item(name), itempool)]
         self.multiworld.itempool += itempool
