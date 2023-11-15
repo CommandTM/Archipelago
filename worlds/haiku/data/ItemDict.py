@@ -84,7 +84,7 @@ all_items = {
     # endregion
     # region Creators
     "Electron": ItemClassification.progression,
-    "Protron": ItemClassification.progression,
+    "Proton": ItemClassification.progression,
     "Neutron": ItemClassification.progression
     # endregion
     # endregion
