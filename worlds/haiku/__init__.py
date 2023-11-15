@@ -6,6 +6,7 @@ from .data.LocationDict import exclusionTable
 from .Locations import advancement_table, fillAdvancementTable, HaikuAdvancement
 from .Options import HaikuOptions
 from .Regions import linkHaikuAreas, haikuRegions
+from .Rules import setRules, setCompletionRules
 
 offset = 901403403
 
@@ -100,6 +101,10 @@ class HaikuWorld(World):
 
         self.multiworld.regions += [HaikuRegion(*r) for r in haikuRegions]
         linkHaikuAreas(self.multiworld, self.player)
+
+    def set_rules(self):
+        setRules(self.multiworld, self.player)
+        setCompletionRules(self.multiworld, self.player)
 
     def create_item(self, name: str) -> Item:
         item_data = item_table[name]
