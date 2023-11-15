@@ -9,21 +9,19 @@ def linkHaikuAreas(world: MultiWorld, player: int):
 # Region, List Of Exits
 haikuRegions = [
     ("Menu", ["Haiku's Awakening"]),
-    ("Traveling Town", ["Abandoned Wastes Train", "Central Core Train", "Pinion's Expanse Train", "Water Ducts Train",
-                        "Factory Facility Train", "Sunken Wastes Train", "Forgotten Ruins Train",
-                        "The Last Bunker Train"]),
-    ("Abandoned Wastes", ["Trash Chute", "Oven Door", "Sunken Wastes Elevator"]),
-    ("Central Core", ["Air Fryer", "Busted Roof", "Pinion's Elevator Of Doom", "The Sewers"]),
-    ("Pinion's Expanse", []),
+    ("Traveling Town", []),
+    ("Abandoned Wastes", ["Abandoned Wastes Train", "Trash Chute", "Oven Door", "Sunken Wastes Elevator"]),
+    ("Central Core", ["Central Core Train", "Air Fryer", "Busted Roof", "Pinion's Elevator Of Doom", "The Sewers"]),
+    ("Pinion's Expanse", ["Pinion's Expanse Train"]),
     ("Incinerator Burner", ["Midnight Snack"]),
-    ("Water Ducts", ["Industry Leader Elevator"]),
+    ("Water Ducts", ["Water Ducts Train", "Industry Leader Elevator"]),
     ("Ruined Surface", ["Catacomb"]),
-    ("Factory Facility", ["Overheating Factory", "Pinion's Elevator Of Safety", "Factory Door",
-                          "Pinion's Elevator Of Doom 2.0"]),
+    ("Factory Facility", ["Factory Facility Train", "Overheating Factory", "Pinion's Elevator Of Safety",
+                          "Factory Door", "Pinion's Elevator Of Doom 2.0"]),
     ("Blazing Furnace", []),
-    ("Sunken Wastes", ["The Midnight Greenhouse"]),
-    ("Forgotten Ruins", ["Overgrown Sewers"]),
-    ("The Last Bunker", ["Bunker Door"]),
+    ("Sunken Wastes", ["Sunken Wastes Train", "The Midnight Greenhouse"]),
+    ("Forgotten Ruins", ["Forgotten Ruins Train", "Overgrown Sewers"]),
+    ("The Last Bunker", ["The Last Bunker Train", "Bunker Door"]),
     ("Bunker Bypass", ["Broken Elevator", "Bear Trap Alley"])
 ]
 
@@ -31,14 +29,14 @@ haikuRegions = [
 mandatoryConnections = [
     ("Haiku's Awakening", "Abandoned Wastes"),
     # region Train
-    ("Abandoned Wastes Train", "Abandoned Wastes"),
-    ("Central Core Train", "Central Core"),
-    ("Pinion's Expanse Train", "Pinion's Expanse"),
-    ("Water Ducts Train", "Water Ducts"),
+    ("Abandoned Wastes Train", "Traveling Town"),
+    ("Central Core Train", "Traveling Town"),
+    ("Pinion's Expanse Train", "Traveling Town"),
+    ("Water Ducts Train", "Traveling Town"),
     ("Factory Facility Train", "Traveling Town"),
-    ("Sunken Wastes Train", "Factory Facility"),
-    ("Forgotten Ruins Train", "Forgotten Ruins"),
-    ("The Last Bunker Train", "The Last Bunker"),
+    ("Sunken Wastes Train", "Traveling Town"),
+    ("Forgotten Ruins Train", "Traveling Town"),
+    ("The Last Bunker Train", "Traveling Town"),
     # endregion
     # region Abandoned Wastes
     ("Trash Chute", "Bunker Bypass"),

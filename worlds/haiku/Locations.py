@@ -8,8 +8,8 @@ class AdvData(typing.NamedTuple):
     region: str
 
 
-class UndertaleAdvancement(Location):
-    game: str = "Undertale"
+class HaikuAdvancement(Location):
+    game: str = "Haiku"
 
 
 advancement_table = {}
