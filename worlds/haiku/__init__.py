@@ -103,8 +103,8 @@ class HaikuWorld(World):
         linkHaikuAreas(self.multiworld, self.player)
 
     def set_rules(self):
-        setRules(self.multiworld, self.player)
-        setCompletionRules(self.multiworld, self.player)
+        setRules(self, self.multiworld, self.player)
+        setCompletionRules(self, self.multiworld, self.player)
 
     def create_item(self, name: str) -> Item:
         item_data = item_table[name]
