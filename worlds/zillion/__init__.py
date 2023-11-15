@@ -456,7 +456,7 @@ class ZillionWorld(World):
 
         classification = ItemClassification.filler
         zz_item = self.id_to_zz_item[item_id]
-        if zz_item.necessaryItems:
+        if zz_item.required:
             classification = ItemClassification.progression
             if not zz_item.is_progression:
                 classification = ItemClassification.progression_skip_balancing
