@@ -1,5 +1,13 @@
 from dataclasses import dataclass
-from Options import Toggle, DefaultOnToggle, PerGameCommonOptions
+from Options import Toggle, DefaultOnToggle, Choice, PerGameCommonOptions
+
+
+
+class goal(Choice):
+    """What should the goal of your game be?"""
+    display_name = "Goal"
+    option_virus = 0
+    option_true = 1
 
 
 class darkRoomLogic(DefaultOnToggle):
@@ -39,6 +47,7 @@ class deathLink(Toggle):
 
 @dataclass
 class HaikuOptions(PerGameCommonOptions):
+    ending: goal
     dark_room_logic: darkRoomLogic
     map_disruptors: shuffleMapDisruptors
     train_stations: shuffleTrainStations

@@ -3,6 +3,7 @@ from worlds.AutoWorld import WebWorld, World
 from .Items import fillItemTable, item_table, HaikuItem
 from .data.ItemDict import necessaryItems, mapDisruptors, trainStations, chipSockets, creators, junkWeights
 from .data.LocationDict import exclusionTable
+from .data.Presets import optionsPresets
 from .Locations import advancement_table, fillAdvancementTable, HaikuAdvancement
 from .Options import HaikuOptions
 from .Regions import linkHaikuAreas, haikuRegions
@@ -13,6 +14,7 @@ offset = 901403403
 
 class HaikuWebWorld(WebWorld):
     theme = "dirt"
+    options_presets = optionsPresets
     tutorials = [Tutorial(
         "Multiworld Setup Tutorial",
         "A guide to setting up Haiku, The Robot for a Multiworld game.",

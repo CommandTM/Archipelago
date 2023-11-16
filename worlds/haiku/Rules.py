@@ -134,14 +134,35 @@ def setRules(self, multiworld: MultiWorld, player: int):
 
 
 def setCompletionRules(self, multiworld: MultiWorld, player: int):
-    completionRequirements = None
-    if self.options.creators.value:
-        completionRequirements = lambda state: (state.can_reach("Central Core", "Region", player) and
-                                                state.has("Proton", player) and state.has("Neutron", player) and
-                                                state.has("Electron", player))
-    else:
-        completionRequirements = lambda state: (state.can_reach("Central Core", "Region", player) and
-                                                state.can_reach("Blazing Furnace", "Region", player) and
-                                                state.can_reach("The Last Bunker", "Region", player) and
-                                                state.has("String And Hook", player))
-    multiworld.completion_condition[player] = lambda state: completionRequirements(state)
+    creatorsVirusEnding = lambda state: (state.can_reach("Central Core", "Region", player) and
+                                         state.has("Proton", player) and
+                                         state.has("Neutron", player) and
+                                         state.has("Electron", player))
+    
+    noCreatorsVirusEnding = lambda state: (state.can_reach("Central Core", "Region", player) and
+                                           state.can_reach("Blazing Furnace", "Region", player) and
+                                           state.can_reach("The Last Bunker", "Region", player) and
+                                           state.has("String And Hook", player))
+
+    creatorsTrueEnding = lambda state: (state.can_reach("Central Core", "Region", player) and
+                                        state.can_reach("Forgotten Ruins", "Region", player) and
+                                        state.has("Proton", player) and
+                                        state.has("Neutron", player) and
+                                        state.has("Electron", player))
+
+    noCreatorsTrueEnding = lambda state: (state.can_reach("Central Core", "Region", player) and
+                                          state.can_reach("Blazing Furnace", "Region", player) and
+                                          state.can_reach("The Last Bunker", "Region", player) and
+                                          state.can_reach("Forgotten Ruins", "Region", player) and
+                                          state.has("String And Hook", player))
+
+    if self.options.ending.value == 0:
+        if self.options.creators.value:
+            multiworld.completion_condition[player] = lambda state: creatorsVirusEnding(state)
+        else:
+            multiworld.completion_condition[player] = lambda state: noCreatorsVirusEnding(state)
+    elif self.options.ending.value == 1:
+        if self.options.creators.value:
+            multiworld.completion_condition[player] = lambda state: creatorsTrueEnding(state)
+        else:
+            multiworld.completion_condition[player] = lambda state: noCreatorsTrueEnding(state)
