@@ -61,17 +61,17 @@ all_items = {
     "The Last Bunker: Map Disruptor 02": ItemClassification.useful,
     # endregion
     # region Train Stations
-    "Abandoned Wastes: Train Station": ItemClassification.useful,
-    "Central Core: Train Station": ItemClassification.useful,
-    "Pinion's Expanse: Train Station": ItemClassification.useful,
-    "Water Ducts: Train Station": ItemClassification.useful,
-    "Factory Facility: Train Station": ItemClassification.useful,
-    "Sunken Wastes: Train Station": ItemClassification.useful,
-    "Forgotten Ruins: Train Station": ItemClassification.useful,
-    "The Last Bunker: Train Station": ItemClassification.useful,
+    "Abandoned Wastes: Train Station": ItemClassification.progression_skip_balancing,
+    "Central Core: Train Station": ItemClassification.progression_skip_balancing,
+    "Pinion's Expanse: Train Station": ItemClassification.progression_skip_balancing,
+    "Water Ducts: Train Station": ItemClassification.progression_skip_balancing,
+    "Factory Facility: Train Station": ItemClassification.progression_skip_balancing,
+    "Sunken Wastes: Train Station": ItemClassification.progression_skip_balancing,
+    "Forgotten Ruins: Train Station": ItemClassification.progression_skip_balancing,
+    "The Last Bunker: Train Station": ItemClassification.progression_skip_balancing,
     # endregion
     # region Various
-    "Power Cell": ItemClassification.useful,
+    "Power Cell": ItemClassification.progression_skip_balancing,
     "Health Fragment": ItemClassification.useful,
     "Rusted Key": ItemClassification.useful,
     "Electric Key": ItemClassification.useful,

@@ -45,6 +45,9 @@ def setRules(self, multiworld: MultiWorld, player: int):
 
     set_rule(multiworld.get_entrance("The Midnight Greenhouse", player),
              lambda state: state.has("Space Disruptor", player))
+    if self.options.dark_room_logic.value:
+        add_rule(multiworld.get_entrance("The Midnight Greenhouse", player),
+                 lambda state: state.has("Bulblet", player))
 
     set_rule(multiworld.get_entrance("Overgrown Sewers", player),
              lambda state: state.has("Sealant Treatment", player))
@@ -71,35 +74,28 @@ def setRules(self, multiworld: MultiWorld, player: int):
 
     if self.options.train_stations.value:
         set_rule(multiworld.get_entrance("Abandoned Wastes Train", player),
-                 lambda state: ((state.has("Central Core Train", player) or
-                                 state.has("Pinion's Expanse Train", player) or
-                                 state.has("Water Ducts Train", player) or
-                                 state.has("Factory Facility Train", player) or
-                                 state.has("Sunken Wastes Train", player) or
-                                 state.has("Forgotten Ruins Train", player) or
-                                 state.has("The Last Bunker Train", player)) and
-                                state.has("Abandoned Wastes Train", player)))
+                 lambda state: state.has("Abandoned Wastes: Train Station", player))
 
         set_rule(multiworld.get_entrance("Central Core Train", player),
-                 lambda state: state.has("Central Core Train", player))
+                 lambda state: state.has("Central Core: Train Station", player))
 
         set_rule(multiworld.get_entrance("Pinion's Expanse Train", player),
-                 lambda state: state.has("Pinion's Expanse Train", player))
+                 lambda state: state.has("Pinion's Expanse: Train Station", player))
 
         add_rule(multiworld.get_entrance("Water Ducts Train", player),
-                 lambda state: state.has("Water Ducts Train", player))
+                 lambda state: state.has("Water Ducts: Train Station", player))
 
         set_rule(multiworld.get_entrance("Factory Facility Train", player),
-                 lambda state: state.has("Factory Facility Train", player))
+                 lambda state: state.has("Factory Facility: Train Station", player))
 
         set_rule(multiworld.get_entrance("Sunken Wastes Train", player),
-                 lambda state: state.has("Sunken Wastes Train", player))
+                 lambda state: state.has("Sunken Wastes: Train Station", player))
 
         set_rule(multiworld.get_entrance("Forgotten Ruins Train", player),
-                 lambda state: state.has("Forgotten Ruins Train", player))
+                 lambda state: state.has("Forgotten Ruins: Train Station", player))
 
         set_rule(multiworld.get_entrance("The Last Bunker Train", player),
-                 lambda state: state.has("The Last Bunker Train", player))
+                 lambda state: state.has("The Last Bunker: Train Station", player))
     else:
         set_rule(multiworld.get_entrance("Abandoned Wastes Train", player),
                  lambda state: ((state.can_reach("Central Core", "Region", player) or
