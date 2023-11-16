@@ -22,7 +22,7 @@ all_locations = {
     "Quick Repair": "Pinion's Expanse",
     "Gyro-Accelerator": "Incinerator Burner",
     "Sawblade": "Water Ducts",
-    "Coolant Soluble": "Water Ducts",
+    "Coolant Soluble": "Central Core",
     "Auto Modifier": "Water Ducts",
     "Tungsten Steel": "Ruined Surface",
     "Auto Repair": "Factory Facility",

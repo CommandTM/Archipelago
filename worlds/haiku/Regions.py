@@ -12,10 +12,10 @@ haikuRegions = [
     ("Traveling Town", []),
     ("Abandoned Wastes", ["Abandoned Wastes Train", "Trash Chute", "Oven Door", "Sunken Wastes Elevator"]),
     ("Central Core", ["Central Core Train", "Air Fryer", "Busted Roof", "Pinion's Elevator Of Doom", "The Sewers"]),
-    ("Pinion's Expanse", ["Pinion's Expanse Train"]),
+    ("Pinion's Expanse", ["Pinion's Expanse Train", "Power Tower Way"]),
     ("Incinerator Burner", ["Midnight Snack"]),
     ("Water Ducts", ["Water Ducts Train", "Industry Leader Elevator"]),
-    ("Ruined Surface", ["Catacomb"]),
+    ("Ruined Surface", []),
     ("Factory Facility", ["Factory Facility Train", "Overheating Factory", "Pinion's Elevator Of Safety",
                           "Factory Door", "Pinion's Elevator Of Doom 2.0"]),
     ("Blazing Furnace", []),
@@ -53,6 +53,7 @@ mandatoryConnections = [
     ("Pinion's Elevator Of Doom", "Pinion's Expanse"),
     ("The Sewers", "Water Ducts"),
     # endregion
+    ("Power Tower Way", "Central Core"),
     ("Midnight Snack", "Sunken Wastes"),
     ("The Midnight Greenhouse", "Forgotten Ruins"),
     ("Overgrown Sewers", "Water Ducts"),
@@ -63,6 +64,5 @@ mandatoryConnections = [
     ("Factory Door", "Ruined Surface"),
     ("Pinion's Elevator Of Doom 2.0", "Pinion's Expanse"),
     # endregion
-    ("Catacomb", "Factory Facility"),
     ("Bunker Door", "Ruined Surface")
 ]
