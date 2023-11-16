@@ -40,7 +40,7 @@ def setRules(self, multiworld: MultiWorld, player: int):
     set_rule(multiworld.get_entrance("Midnight Snack", player),
              lambda state: state.can_reach("Incinerator Burner", "Region", player))
     if self.options.dark_room_logic.value:
-        add_rule(multiworld.get_entrance("Sunken Wastes Elevator", player),
+        add_rule(multiworld.get_entrance("Midnight Snack", player),
                  lambda state: state.has("Bulblet", player))
 
     set_rule(multiworld.get_entrance("The Midnight Greenhouse", player),
