@@ -19,7 +19,7 @@ optionsPresets = {
         "wrench": 0,
         "chip_sockets": 0
     },
-    "Pure Difficulty": {
+    "Pain Mode": {
         "progression_balancing": 0,
         "ending": "true",
         "dark_room_logic": 0,
