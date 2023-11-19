@@ -9,10 +9,8 @@ def setRules(self, multiworld: MultiWorld, player: int):
     set_rule(multiworld.get_entrance("Oven Door", player),
              lambda state: (state.has("Heat Treatment", player) and state.has("Electro-Magnetism", player)))
 
-    set_rule(multiworld.get_entrance("Sunken Wastes Elevator", player),
-             lambda state: state.can_reach("Sunken Wastes", "Region", player))
     if self.options.dark_room_logic.value:
-        add_rule(multiworld.get_entrance("Sunken Wastes Elevator", player),
+        set_rule(multiworld.get_entrance("Sunken Wastes Elevator", player),
                  lambda state: state.has("Bulblet", player))
 
     set_rule(multiworld.get_entrance("Broken Elevator", player),
