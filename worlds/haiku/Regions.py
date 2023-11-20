@@ -8,61 +8,57 @@ def linkHaikuAreas(world: MultiWorld, player: int):
 
 # Region, List Of Exits
 haikuRegions = [
-    ("Menu", ["Haiku's Awakening"]),
-    ("Traveling Town", []),
-    ("Abandoned Wastes", ["Abandoned Wastes Train", "Trash Chute", "Oven Door", "Sunken Wastes Elevator"]),
-    ("Central Core", ["Central Core Train", "Air Fryer", "Busted Roof", "Pinion's Elevator Of Doom", "The Sewers"]),
-    ("Pinion's Expanse", ["Pinion's Expanse Train", "Power Tower Way"]),
-    ("Incinerator Burner", ["Midnight Snack"]),
-    ("Water Ducts", ["Water Ducts Train", "Industry Leader Elevator"]),
-    ("Ruined Surface", []),
-    ("Factory Facility", ["Factory Facility Train", "Overheating Factory", "Pinion's Elevator Of Safety",
-                          "Factory Door", "Pinion's Elevator Of Doom 2.0"]),
-    ("Blazing Furnace", []),
-    ("Sunken Wastes", ["Sunken Wastes Train", "The Midnight Greenhouse"]),
-    ("Forgotten Ruins", ["Forgotten Ruins Train", "Overgrown Sewers"]),
-    ("The Last Bunker", ["The Last Bunker Train", "Bunker Door"]),
-    ("Bunker Bypass", ["Broken Elevator", "Bear Trap Alley"])
+    # ("", []),
+    # region Abandoned Wastes
+    ("Menu", ["Menu=AW-01"]),
+    ("AW-01", ["AW-01=AW-02 01", "AW-01=AW-02 02", "AW-01=AW-03", "AW-01=AW-TG", "AW-01=TLB-01"]),
+    ("AW-02", ["AW-02=AW-03", 'AW-02=IB-02']),
+    ("AW-03", []),
+    ("AW-TG", []),
+    # endregion
+    # region The Last Bunker
+    ("TLB-01", ["TLB-01=TLB-03"]),
+    ("TLB-02", ["TLB-02=TLB-03"]),
+    ("TLB-03", ["TLB-03=TLB-04", "TLB-03=TLB-05", "TLB-03=TLB-T", "TLB-03=RS-01"]),
+    ("TLB-04", []),
+    ("TLB-05", []),
+    ("TLB-T", ["TLB-T=TLB-03"]),
+    # endregion
+    ("RS-01", []),
+    # region Incinerator Burner
+    ("IB-01", ["IB-01=IB-02", "IB-01=AW-02"]),
+    ("IB-02", ["IB-02=IB-03"]),
+    ("IB-03", []),
+    # endregion
 ]
 
 # Exit, Region
 mandatoryConnections = [
-    ("Haiku's Awakening", "Abandoned Wastes"),
-    # region Train
-    ("Abandoned Wastes Train", "Traveling Town"),
-    ("Central Core Train", "Traveling Town"),
-    ("Pinion's Expanse Train", "Traveling Town"),
-    ("Water Ducts Train", "Traveling Town"),
-    ("Factory Facility Train", "Traveling Town"),
-    ("Sunken Wastes Train", "Traveling Town"),
-    ("Forgotten Ruins Train", "Traveling Town"),
-    ("The Last Bunker Train", "Traveling Town"),
+    # ("", ""),
+    # region Region Connections
+    ("AW-01=TLB-01", "TLB-01"),
+    ("AW-02=IB-02", "IB-02"),
+    ("IB-01=AW-02", "AW-02"),
     # endregion
     # region Abandoned Wastes
-    ("Trash Chute", "Bunker Bypass"),
-    ("Oven Door", "Incinerator Burner"),
-    ("Sunken Wastes Elevator", "Sunken Wastes"),
+    ("Menu=AW-01", "AW-01"),
+    ("AW-01=AW-02 01", "AW-02"),
+    ("AW-01=AW-02 02", "AW-02"),
+    ("AW-01=AW-03", "AW-03"),
+    ("AW=01=AW-TG", "AW-TG"),
+    ("AW-02=AW-03", "AW-03"),
     # endregion
-    # region Bunker Bypass
-    ("Broken Elevator", "The Last Bunker"),
-    ("Bear Trap Alley", "Central Core"),
+    # region The Last Bunker
+    ("TLB-01=TLB-03", "TLB-03"),
+    ("TLB-02=TLB-03", "TLB-03"),
+    ("TLB-03=TLB-04", "TLB-04"),
+    ("TLB-03=TLB-05", "TLB-05"),
+    ("TLB-03=TLB-T", "TLB-T"),
+    ("TLB-T=TLB-03", "TLB-03"),
+    ("TLB-03=RS-01", "RS-01"),
     # endregion
-    # region Central Core
-    ("Air Fryer", "Incinerator Burner"),
-    ("Busted Roof", "The Last Bunker"),
-    ("Pinion's Elevator Of Doom", "Pinion's Expanse"),
-    ("The Sewers", "Water Ducts"),
+    # region Incinerator Burner
+    ("IB-01=IB-02", "IB-02"),
+    ("IB-02=IB-03", "IB-03"),
     # endregion
-    ("Power Tower Way", "Central Core"),
-    ("Midnight Snack", "Sunken Wastes"),
-    ("The Midnight Greenhouse", "Forgotten Ruins"),
-    ("Overgrown Sewers", "Water Ducts"),
-    ("Industry Leader Elevator", "Factory Facility"),
-    # region Factory Facility
-    ("Overheating Factory", "Blazing Furnace"),
-    ("Pinion's Elevator Of Safety", "Pinion's Expanse"),
-    ("Factory Door", "Ruined Surface"),
-    ("Pinion's Elevator Of Doom 2.0", "Pinion's Expanse"),
-    # endregion
-    ("Bunker Door", "Ruined Surface")
 ]
