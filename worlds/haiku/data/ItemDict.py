@@ -73,8 +73,8 @@ all_items = {
     # region Various
     "Power Cell": ItemClassification.progression_skip_balancing,
     "Health Fragment": ItemClassification.useful,
-    "Rusted Key": ItemClassification.useful,
-    "Electric Key": ItemClassification.useful,
+    "Rusted Key": ItemClassification.progression_skip_balancing,
+    "Electric Key": ItemClassification.progression_skip_balancing,
     "Cassette Tape": ItemClassification.useful,
     "Green Skull": ItemClassification.useful,
     "Red Skull": ItemClassification.useful,

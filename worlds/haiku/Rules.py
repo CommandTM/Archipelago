@@ -7,10 +7,14 @@ def setRules(self, multiworld: MultiWorld, player: int):
              lambda state: state.has("Electro-Magnetism", player))
 
     set_rule(multiworld.get_entrance("Oven Door", player),
-             lambda state: (state.has("Heat Treatment", player) and state.has("Electro-Magnetism", player)))
+             lambda state: (state.has("Heat Treatment", player) and (state.has("Electro-Magnetism", player)) or
+                            state.has("Jump Boosters", player) or state.has("Rusted Key", player)))
 
+    set_rule(multiworld.get_entrance("Sunken Wastes Elevator", player),
+             lambda state: (state.has("Electro-Magnetism", player)) or state.has("Jump Boosters", player) or
+                           state.has("Rusted Key", player))
     if self.options.dark_room_logic.value:
-        set_rule(multiworld.get_entrance("Sunken Wastes Elevator", player),
+        add_rule(multiworld.get_entrance("Sunken Wastes Elevator", player),
                  lambda state: state.has("Bulblet", player))
 
     set_rule(multiworld.get_entrance("Broken Elevator", player),
@@ -136,7 +140,7 @@ def setCompletionRules(self, multiworld: MultiWorld, player: int):
                                          state.has("Proton", player) and
                                          state.has("Neutron", player) and
                                          state.has("Electron", player))
-    
+
     noCreatorsVirusEnding = lambda state: (state.can_reach("Central Core", "Region", player) and
                                            state.can_reach("Blazing Furnace", "Region", player) and
                                            state.can_reach("The Last Bunker", "Region", player) and
