@@ -74,8 +74,12 @@ def setRules(self, multiworld: MultiWorld, player: int):
     set_rule(multiworld.get_entrance("Water Ducts Train", player),
              lambda state: state.has("Sealant Treatment", player))
 
+    set_rule(multiworld.get_entrance("Abandoned Wastes Train", player),
+             lambda state: (state.has("Electro-Magnetism", player) or
+                            state.has("Jump Boosters", player) or state.has("Rusted Key", player)))
+
     if self.options.train_stations.value:
-        set_rule(multiworld.get_entrance("Abandoned Wastes Train", player),
+        add_rule(multiworld.get_entrance("Abandoned Wastes Train", player),
                  lambda state: state.has("Abandoned Wastes: Train Station", player))
 
         set_rule(multiworld.get_entrance("Central Core Train", player),
@@ -99,7 +103,7 @@ def setRules(self, multiworld: MultiWorld, player: int):
         set_rule(multiworld.get_entrance("The Last Bunker Train", player),
                  lambda state: state.has("The Last Bunker: Train Station", player))
     else:
-        set_rule(multiworld.get_entrance("Abandoned Wastes Train", player),
+        add_rule(multiworld.get_entrance("Abandoned Wastes Train", player),
                  lambda state: ((state.can_reach("Central Core", "Region", player) or
                                  state.can_reach("Pinion's Expanse", "Region", player) or
                                  state.can_reach("Water Ducts", "Region", player) or
