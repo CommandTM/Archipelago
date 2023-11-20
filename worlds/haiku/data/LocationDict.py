@@ -13,7 +13,7 @@ all_locations = {
     "Goldcrest Whistle": "Abandoned Wastes",
     # endregion
     # region Chips
-    "Infinity Edge": "Abandoned Wastes",
+    "Infinity Edge": "Bunker Bypass",
     "Electro-Emitter": "Central Core",
     "Shock Wave": "Central Core",
     "Shock Projectile": "Central Core",
@@ -31,7 +31,7 @@ all_locations = {
     "Amplifying Transputer": "Sunken Wastes",
     "Magnetic Footing": "Forgotten Ruins",
     "Space Disturbance": "Forgotten Ruins",
-    "Nomad's Plate": "The Last Bunker",
+    "Nomad's Plate": "Bunker Bypass",
     "Heat Drive": "The Last Bunker",
     "Agile Alloy": "Traveling Town",
     "Sword Extension": "Traveling Town",
@@ -66,7 +66,7 @@ all_locations = {
     "Forgotten Ruins: Power Cell 03": "Forgotten Ruins",
     "The Last Bunker: Power Cell 01": "The Last Bunker",
     "The Last Bunker: Power Cell 02": "The Last Bunker",
-    "The Last Bunker: Power Cell 03": "The Last Bunker",
+    "Bunker Bypass: Power Cell": "Bunker Bypass",
     # endregion
     # region Health Fragments
     "Abandoned Wastes: Health Fragment": "Abandoned Wastes",
