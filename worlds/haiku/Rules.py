@@ -12,6 +12,16 @@ def setRules(self, multiworld: MultiWorld, player: int):
 
     set_rule(multiworld.get_entrance("IB-01=AW-02", player),
              lambda state: state.can_reach("IB-01", "Region", player))
+
+    if self.options.dark_room_logic.value:
+        set_rule(multiworld.get_entrance("AW-02=SW-01", player),
+                 lambda state: state.has("Bulblet", player))
+
+    set_rule(multiworld.get_entrance("IB-03=SW-01", player),
+             lambda state: (state.has("Jump Boosters", player) or state.has("Electro-Magnetism", player)))
+    if self.options.dark_room_logic.value:
+        add_rule(multiworld.get_entrance("IB-03=SW-01", player),
+                 lambda state: state.has("Bulblet", player))
     # endregion
     # region Abandoned Wastes
     set_rule(multiworld.get_entrance("AW-01=AW-02 01", player),
@@ -57,6 +67,16 @@ def setRules(self, multiworld: MultiWorld, player: int):
 
     set_rule(multiworld.get_entrance("IB-02=IB-03", player),
              lambda state: (state.has("Electro-Magnetism", player) or state.has("Jump Boosters", player)))
+    # endregion
+    # region Sunken Wastes
+    set_rule(multiworld.get_entrance("SW-01=SW-02", player),
+             lambda state: state.has("Body Modifier", player))
+
+    set_rule(multiworld.get_entrance("SW-02=SW-TW", player),
+             lambda state: (state.has("Jump Boosters", player) or state.has("Electro-Magnetism", player)))
+
+    set_rule(multiworld.get_entrance("SW-TW=SW-01", player),
+             lambda state: state.can_reach("SW-TW", "Region", player))
     # endregion
 
 

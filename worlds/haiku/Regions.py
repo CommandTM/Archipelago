@@ -12,7 +12,7 @@ haikuRegions = [
     # region Abandoned Wastes
     ("Menu", ["Menu=AW-01"]),
     ("AW-01", ["AW-01=AW-02 01", "AW-01=AW-02 02", "AW-01=AW-03", "AW-01=AW-TG", "AW-01=TLB-01"]),
-    ("AW-02", ["AW-02=AW-03", 'AW-02=IB-02']),
+    ("AW-02", ["AW-02=AW-03", "AW-02=IB-02", "AW-02=SW-01"]),
     ("AW-03", []),
     ("AW-TG", []),
     # endregion
@@ -28,7 +28,12 @@ haikuRegions = [
     # region Incinerator Burner
     ("IB-01", ["IB-01=IB-02", "IB-01=AW-02"]),
     ("IB-02", ["IB-02=IB-03"]),
-    ("IB-03", []),
+    ("IB-03", ["IB-03=SW-01"]),
+    # endregion
+    # region Sunken Wastes
+    ("SW-01", ["SW-01=SW-02"]),
+    ("SW-02", ["SW-02=SW-TW"]),
+    ("SW-TW", ["SW-TW=SW-01"])
     # endregion
 ]
 
@@ -39,6 +44,8 @@ mandatoryConnections = [
     ("AW-01=TLB-01", "TLB-01"),
     ("AW-02=IB-02", "IB-02"),
     ("IB-01=AW-02", "AW-02"),
+    ("AW-02=SW-01", "SW-01"),
+    ("IB-03=SW-01", "SW-01"),
     # endregion
     # region Abandoned Wastes
     ("Menu=AW-01", "AW-01"),
@@ -60,5 +67,10 @@ mandatoryConnections = [
     # region Incinerator Burner
     ("IB-01=IB-02", "IB-02"),
     ("IB-02=IB-03", "IB-03"),
+    # endregion
+    # region Sunken Wastes
+    ("SW-01=SW-02", "SW-02"),
+    ("SW-02=SW-TW", "SW-TW"),
+    ("SW-TW=SW-01", "SW-01")
     # endregion
 ]
