@@ -30,7 +30,8 @@ def setRules(self, multiworld: MultiWorld, player: int):
              lambda state: (state.has("String And Hook", player) and (state.has("Jump Boosters", player) or
                                                                       state.has("Electro-Magnetism"))))
 
-    
+    set_rule(multiworld.get_entrance("CC-04=PE-01", player),
+             lambda state: state.has("Electro-Magnetism"))
     # endregion
     # region Abandoned Wastes
     set_rule(multiworld.get_entrance("AW-01=AW-02 01", player),

@@ -39,11 +39,12 @@ haikuRegions = [
     ("CC-01", ["CC-01=CC-02 01", "CC-01=CC-02 02", "CC-01=CC-03", "CC-01=CC-QP", "CC-01=CC-04", "CC-01=CC-05"]),
     ("CC-02", ["CC-02=CC-03 01", "CC-02=CC-03 02"]),
     ("CC-03", []),
-    ("CC-04", ["CC-04=CC-01"]),
+    ("CC-04", ["CC-04=CC-01", "CC-04=PE-01"]),
     ("CC-05", ["CC-05=CC-E"]),
     ("CC-QP", []),
     ("CC-E", []),
     # endregion
+    ("PE-01", []),
 ]
 
 # Exit, Region
