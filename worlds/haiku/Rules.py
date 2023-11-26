@@ -22,6 +22,15 @@ def setRules(self, multiworld: MultiWorld, player: int):
     if self.options.dark_room_logic.value:
         add_rule(multiworld.get_entrance("IB-03=SW-01", player),
                  lambda state: state.has("Bulblet", player))
+
+    set_rule(multiworld.get_entrance("TLB-02=CC-01", player),
+             lambda state: state.has("Power Bomb", player))
+
+    set_rule(multiworld.get_entrance("IB-01=CC-01", player),
+             lambda state: (state.has("String And Hook", player) and (state.has("Jump Boosters", player) or
+                                                                      state.has("Electro-Magnetism"))))
+
+    
     # endregion
     # region Abandoned Wastes
     set_rule(multiworld.get_entrance("AW-01=AW-02 01", player),
@@ -77,6 +86,34 @@ def setRules(self, multiworld: MultiWorld, player: int):
 
     set_rule(multiworld.get_entrance("SW-TW=SW-01", player),
              lambda state: state.can_reach("SW-TW", "Region", player))
+    # endregion
+    # region Central Core
+    set_rule(multiworld.get_entrance("CC-01=CC-02 01", player),
+             lambda state: state.has("Space Disruptor", player))
+
+    set_rule(multiworld.get_entrance("CC-01=CC-02 02", player),
+             lambda state: state.has("Body Modifier", player))
+
+    set_rule(multiworld.get_entrance("CC-01=CC-03", player),
+             lambda state: (state.has("Jump Boosters", player) or state.has("Electro-Magnetism")))
+
+    set_rule(multiworld.get_entrance("CC-01=CC-04", player),
+             lambda state: (state.has("Jump Boosters", player) or state.has("Electro-Magnetism")))
+
+    set_rule(multiworld.get_entrance("CC-01=CC-05", player),
+             lambda state: state.has("Power Bomb", player))
+
+    set_rule(multiworld.get_entrance("CC-02=CC-03 01", player),
+             lambda state: state.has("Body Modifier", player))
+
+    set_rule(multiworld.get_entrance("CC-02=CC-03 02", player),
+             lambda state: state.has("Body Modifier", player))
+
+    set_rule(multiworld.get_entrance("CC-04=CC-01", player),
+             lambda state: state.can_reach("CC-04", "Region", player))
+
+    set_rule(multiworld.get_entrance("CC-05=CC-E", player),
+             lambda state: state.has("Power Bomb", player))
     # endregion
 
 

@@ -23,4 +23,4 @@ and optionally (as decided in your YAML)...
 Everything listed above can appear in other worlds.
 
 ## what does another world's item look like in haiku, the robot
-TBD
+[PLACEHOLDER, LAUREN PLEASE NAME]

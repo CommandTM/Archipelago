@@ -27,7 +27,7 @@ class HaikuWebWorld(WebWorld):
 
 class HaikuWorld(World):
     """
-    Ah
+    [PLACEHOLDER, LAUREN PLEASE NAME]
     """
     game = "Haiku, The Robot"
     web = HaikuWebWorld()
