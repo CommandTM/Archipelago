@@ -9,11 +9,11 @@ all_locations = {
     "String And Hook": "CC-01",
     "Space Disruptor": "Sunken Wastes",
     "Power Bomb": "CC-05",
-    "Adjustable Wrench": "AW-01",
+    "Adjustable Wrench": "AW-04",
     "Goldcrest Whistle": "AW-02",
     # endregion
     # region Chips
-    "Infinity Edge": "TLB-01",
+    "Infinity Edge": "AW-02",
     "Electro-Emitter": "CC-QP",
     "Shock Wave": "CC-01",
     "Shock Projectile": "CC-01",
@@ -81,13 +81,13 @@ all_locations = {
     "Traveling Town: Health Fragment": "Traveling Town",
     # endregion
     # region Rusty Keys
-    "Abandoned Wastes: Rusty Key": "AW-01",
+    "Abandoned Wastes: Rusty Key": "AW-04",
     "Traveling Town: Rusty Key": "Traveling Town",
     "Sunken Wastes: Rusty Key": "SW-01",
     "Factory Facility: Rusty Key": "Factory Facility",
     # endregion
     # region Map Disruptors
-    "Abandoned Wastes: Map Disruptor 01": "AW-02",
+    "Abandoned Wastes: Map Disruptor 01": "AW-05",
     "Abandoned Wastes: Map Disruptor 02": "AW-03",
     "Central Core: Map Disruptor 01": "CC-03",
     "Central Core: Map Disruptor 02": "CC-05",
