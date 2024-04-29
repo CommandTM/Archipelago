@@ -1,3 +1,5 @@
+from typing import Dict, Any
+
 from BaseClasses import Item, Region, Entrance, Tutorial
 from worlds.AutoWorld import WebWorld, World
 from .Items import fillItemTable, item_table, HaikuItem
@@ -9,7 +11,7 @@ from .Options import HaikuOptions
 from .Regions import linkHaikuAreas, haikuRegions
 from .Rules import setRules, setCompletionRules
 
-offset = 901403403
+offset = 1651104000
 
 
 class HaikuWebWorld(WebWorld):
@@ -112,3 +114,8 @@ class HaikuWorld(World):
         item_data = item_table[name]
         item = HaikuItem(name, item_data.classification, item_data.code, self.player)
         return item
+
+    def fill_slot_data(self) -> Dict[str, Any]:
+        slot_data = self.options.as_dict("ending")
+        slot_data["baseID"] = offset
+        return slot_data
