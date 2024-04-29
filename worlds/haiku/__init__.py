@@ -3,7 +3,7 @@ from typing import Dict, Any
 from BaseClasses import Item, Region, Entrance, Tutorial
 from worlds.AutoWorld import WebWorld, World
 from .Items import fillItemTable, item_table, HaikuItem
-from .data.ItemDict import necessaryItems, mapDisruptors, trainStations, chipSockets, creators, junkWeights
+from .data.ItemDict import necessaryItems, chipSockets, junkWeights
 from .data.LocationDict import exclusionTable
 from .data.Presets import optionsPresets
 from .Locations import advancement_table, fillAdvancementTable, HaikuAdvancement
@@ -56,17 +56,17 @@ class HaikuWorld(World):
         else:
             exculsionPool.update(exclusionTable["wrench"])
 
-        if self.options.map_disruptors.value:  # Map Disruptors Option
-            for name, num in mapDisruptors.items():
-                itempool += [name] * num
-        else:
-            exculsionPool.update(exclusionTable["mapDisruptors"])
+        #if self.options.map_disruptors.value:  # Map Disruptors Option
+        #    for name, num in mapDisruptors.items():
+        #        itempool += [name] * num
+        #else:
+        #    exculsionPool.update(exclusionTable["mapDisruptors"])
 
-        if self.options.train_stations.value:  # Train Stations Option
-            for name, num in trainStations.items():
-                itempool += [name] * num
-        else:
-            exculsionPool.update(exclusionTable["trainStations"])
+        #if self.options.train_stations.value:  # Train Stations Option
+        #    for name, num in trainStations.items():
+        #        itempool += [name] * num
+        #else:
+        #    exculsionPool.update(exclusionTable["trainStations"])
 
         if self.options.chip_sockets.value:  # Chip Sockets Option
             for name, num in chipSockets.items():
@@ -74,11 +74,11 @@ class HaikuWorld(World):
         else:
             exculsionPool.update(exclusionTable["chipSockets"])
 
-        if self.options.creators.value:  # Creators Option
-            for name, num in creators.items():
-                itempool += [name] * num
-        else:
-            exculsionPool.update(exclusionTable["creators"])
+        #if self.options.creators.value:  # Creators Option
+        #    for name, num in creators.items():
+        #        itempool += [name] * num
+        #else:
+        #    exculsionPool.update(exclusionTable["creators"])
         # endregion
 
         itempool += self.multiworld.random.choices(list(junkWeights.keys()), list(junkWeights.values()),
@@ -95,10 +95,10 @@ class HaikuWorld(World):
                               for loc_name, loc_data in advancement_table.items()
                               if loc_data.region == region_name and
                               (loc_name not in exclusionTable["wrench"] or self.options.wrench.value) and
-                              (loc_name not in exclusionTable["mapDisruptors"] or self.options.map_disruptors.value) and
-                              (loc_name not in exclusionTable["trainStations"] or self.options.train_stations.value) and
-                              (loc_name not in exclusionTable["chipSockets"] or self.options.chip_sockets.value) and
-                              (loc_name not in exclusionTable["creators"] or self.options.creators.value)]
+                              #(loc_name not in exclusionTable["mapDisruptors"] or self.options.map_disruptors.value) and
+                              #(loc_name not in exclusionTable["trainStations"] or self.options.train_stations.value) and
+                              (loc_name not in exclusionTable["chipSockets"] or self.options.chip_sockets.value)] #and
+                              #(loc_name not in exclusionTable["creators"] or self.options.creators.value)]
             for exit in exits:
                 ret.exits.append(Entrance(self.player, exit, ret))
             return ret
@@ -118,4 +118,6 @@ class HaikuWorld(World):
     def fill_slot_data(self) -> Dict[str, Any]:
         slot_data = self.options.as_dict("ending")
         slot_data["baseID"] = offset
+        slot_data["wrench"] = self.options.wrench.value
+        slot_data["chip_sockets"] = self.options.chip_sockets.value
         return slot_data

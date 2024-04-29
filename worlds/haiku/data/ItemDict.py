@@ -44,33 +44,6 @@ all_items = {
     "Power Enhancer": ItemClassification.useful,
     "Power Processor": ItemClassification.useful,
     # endregion
-    # region Map Disruptors
-    "Abandoned Wastes: Map Disruptor 01": ItemClassification.useful,
-    "Abandoned Wastes: Map Disruptor 02": ItemClassification.useful,
-    "Central Core: Map Disruptor 01": ItemClassification.useful,
-    "Central Core: Map Disruptor 02": ItemClassification.useful,
-    "Pinion's Expanse: Map Disruptor": ItemClassification.useful,
-    "Incinerator Burner: Map Disruptor": ItemClassification.useful,
-    "Water Ducts: Map Disruptor": ItemClassification.useful,
-    "Factory Facility: Map Disruptor 01": ItemClassification.useful,
-    "Factory Facility: Map Disruptor 02": ItemClassification.useful,
-    "Blazing Furnace: Map Disruptor": ItemClassification.useful,
-    "Sunken Wastes: Map Disruptor": ItemClassification.useful,
-    "Forgotten Ruins: Map Disruptor": ItemClassification.useful,
-    "The Last Bunker: Map Disruptor 01": ItemClassification.useful,
-    "The Last Bunker: Map Disruptor 02": ItemClassification.useful,
-    # endregion
-    # region Train Stations
-    "Abandoned Wastes: Train Station": ItemClassification.progression_skip_balancing,
-    "Central Core: Train Station": ItemClassification.progression_skip_balancing,
-    "Pinion's Expanse: Train Station": ItemClassification.progression_skip_balancing,
-    "Water Ducts: Train Station": ItemClassification.progression_skip_balancing,
-    "Factory Facility: Train Station": ItemClassification.progression_skip_balancing,
-    "Sunken Wastes: Train Station": ItemClassification.progression_skip_balancing,
-    "Forgotten Ruins: Train Station": ItemClassification.progression_skip_balancing,
-    "The Last Bunker: Train Station": ItemClassification.progression_skip_balancing,
-    # endregion
-    # region Various
     "Power Cell": ItemClassification.progression_skip_balancing,
     "Health Fragment": ItemClassification.useful,
     "Rusted Key": ItemClassification.progression_skip_balancing,
@@ -84,16 +57,41 @@ all_items = {
     "Blue Chip Socket": ItemClassification.useful,
     "Green Chip Socket": ItemClassification.useful,
     # endregion
-    # region Creators
-    "Electron": ItemClassification.progression,
-    "Proton": ItemClassification.progression,
-    "Neutron": ItemClassification.progression,
-    # endregion
     # region Money
     "$10": ItemClassification.filler,
     "$50": ItemClassification.filler,
     "$100": ItemClassification.filler
     # endregion
+    # region Creators
+    # "Electron": ItemClassification.progression,
+    # "Proton": ItemClassification.progression,
+    # "Neutron": ItemClassification.progression,
+    # endregion
+    # region Map Disruptors
+    # "Abandoned Wastes: Map Disruptor 01": ItemClassification.useful,
+    # "Abandoned Wastes: Map Disruptor 02": ItemClassification.useful,
+    # "Central Core: Map Disruptor 01": ItemClassification.useful,
+    # "Central Core: Map Disruptor 02": ItemClassification.useful,
+    # "Pinion's Expanse: Map Disruptor": ItemClassification.useful,
+    # "Incinerator Burner: Map Disruptor": ItemClassification.useful,
+    # "Water Ducts: Map Disruptor": ItemClassification.useful,
+    # "Factory Facility: Map Disruptor 01": ItemClassification.useful,
+    # "Factory Facility: Map Disruptor 02": ItemClassification.useful,
+    # "Blazing Furnace: Map Disruptor": ItemClassification.useful,
+    # "Sunken Wastes: Map Disruptor": ItemClassification.useful,
+    # "Forgotten Ruins: Map Disruptor": ItemClassification.useful,
+    # "The Last Bunker: Map Disruptor 01": ItemClassification.useful,
+    # "The Last Bunker: Map Disruptor 02": ItemClassification.useful,
+    # endregion
+    # region Train Stations
+    # "Abandoned Wastes: Train Station": ItemClassification.progression_skip_balancing,
+    # "Central Core: Train Station": ItemClassification.progression_skip_balancing,
+    # "Pinion's Expanse: Train Station": ItemClassification.progression_skip_balancing,
+    # "Water Ducts: Train Station": ItemClassification.progression_skip_balancing,
+    # "Factory Facility: Train Station": ItemClassification.progression_skip_balancing,
+    # "Sunken Wastes: Train Station": ItemClassification.progression_skip_balancing,
+    # "Forgotten Ruins: Train Station": ItemClassification.progression_skip_balancing,
+    # "The Last Bunker: Train Station": ItemClassification.progression_skip_balancing,
     # endregion
 }
 
@@ -147,33 +145,33 @@ necessaryItems = {
     "Liquid Coolant": 3
 }
 
-mapDisruptors = {
-    "Abandoned Wastes: Map Disruptor 01": 1,
-    "Abandoned Wastes: Map Disruptor 02": 1,
-    "Central Core: Map Disruptor 01": 1,
-    "Central Core: Map Disruptor 02": 1,
-    "Pinion's Expanse: Map Disruptor": 1,
-    "Incinerator Burner: Map Disruptor": 1,
-    "Water Ducts: Map Disruptor": 1,
-    "Factory Facility: Map Disruptor 01": 1,
-    "Factory Facility: Map Disruptor 02": 1,
-    "Blazing Furnace: Map Disruptor": 1,
-    "Sunken Wastes: Map Disruptor": 1,
-    "Forgotten Ruins: Map Disruptor": 1,
-    "The Last Bunker: Map Disruptor 01": 1,
-    "The Last Bunker: Map Disruptor 02": 1
-}
+#mapDisruptors = {
+#    "Abandoned Wastes: Map Disruptor 01": 1,
+#    "Abandoned Wastes: Map Disruptor 02": 1,
+#    "Central Core: Map Disruptor 01": 1,
+#    "Central Core: Map Disruptor 02": 1,
+#    "Pinion's Expanse: Map Disruptor": 1,
+#    "Incinerator Burner: Map Disruptor": 1,
+#    "Water Ducts: Map Disruptor": 1,
+#    "Factory Facility: Map Disruptor 01": 1,
+#    "Factory Facility: Map Disruptor 02": 1,
+#    "Blazing Furnace: Map Disruptor": 1,
+#    "Sunken Wastes: Map Disruptor": 1,
+#    "Forgotten Ruins: Map Disruptor": 1,
+#    "The Last Bunker: Map Disruptor 01": 1,
+#    "The Last Bunker: Map Disruptor 02": 1
+#}
 
-trainStations = {
-    "Abandoned Wastes: Train Station": 1,
-    "Central Core: Train Station": 1,
-    "Pinion's Expanse: Train Station": 1,
-    "Water Ducts: Train Station": 1,
-    "Factory Facility: Train Station": 1,
-    "Sunken Wastes: Train Station": 1,
-    "Forgotten Ruins: Train Station": 1,
-    "The Last Bunker: Train Station": 1
-}
+#trainStations = {
+#    "Abandoned Wastes: Train Station": 1,
+#    "Central Core: Train Station": 1,
+#    "Pinion's Expanse: Train Station": 1,
+#    "Water Ducts: Train Station": 1,
+#    "Factory Facility: Train Station": 1,
+#    "Sunken Wastes: Train Station": 1,
+#    "Forgotten Ruins: Train Station": 1,
+#    "The Last Bunker: Train Station": 1
+#}
 
 chipSockets = {
     "Red Chip Socket": 2,
@@ -181,11 +179,11 @@ chipSockets = {
     "Green Chip Socket": 1
 }
 
-creators = {
-    "Electron": 1,
-    "Proton": 1,
-    "Neutron": 1
-}
+#creators = {
+#    "Electron": 1,
+#    "Proton": 1,
+#    "Neutron": 1
+#}
 
 junkWeights = {
     "$10": 10,

@@ -86,33 +86,6 @@ all_locations = {
     "Sunken Wastes: Rusty Key": "SW-01",
     "Factory Facility: Rusty Key": "Factory Facility",
     # endregion
-    # region Map Disruptors
-    "Abandoned Wastes: Map Disruptor 01": "AW-05",
-    "Abandoned Wastes: Map Disruptor 02": "AW-03",
-    "Central Core: Map Disruptor 01": "CC-03",
-    "Central Core: Map Disruptor 02": "CC-05",
-    "Pinion's Expanse: Map Disruptor": "PE-01",
-    "Incinerator Burner: Map Disruptor": "IB-01",
-    "Water Ducts: Map Disruptor": "Water Ducts",
-    "Factory Facility: Map Disruptor 01": "Factory Facility",
-    "Factory Facility: Map Disruptor 02": "Factory Facility",
-    "Blazing Furnace: Map Disruptor": "Blazing Furnace",
-    "Sunken Wastes: Map Disruptor": "SW-01",
-    "Forgotten Ruins: Map Disruptor": "Forgotten Ruins",
-    "The Last Bunker: Map Disruptor 01": "TLB-02",
-    "The Last Bunker: Map Disruptor 02": "TLB-05",
-    # endregion
-    # region Train Stations
-    "Abandoned Wastes: Train Station": "AW-02",
-    "Central Core: Train Station": "CC-01",
-    "Pinion's Expanse: Train Station": "PE-01",
-    "Water Ducts: Train Station": "Water Ducts",
-    "Factory Facility: Train Station": "Factory Facility",
-    "Sunken Wastes: Train Station": "SW-01",
-    "Forgotten Ruins: Train Station": "Forgotten Ruins",
-    "The Last Bunker: Train Station": "TLB-03",
-    # endregion
-    # region Various
     "Electric Key": "CC-E",
     "Cassette Tape": "TLB-03",
     "Green Skull": "Traveling Town",
@@ -130,10 +103,35 @@ all_locations = {
     "Traveling Town: BLue Chip Socket": "Traveling Town",
     # endregion
     # region Creators
-    "Electron": "CC-E",
-    "Proton": "Blazing Furnace",
-    "Neutron": "TLB-05"
+    # "Electron": "CC-E",
+    # "Proton": "Blazing Furnace",
+    # "Neutron": "TLB-05"
     # endregion
+    # region Map Disruptors
+    # "Abandoned Wastes: Map Disruptor 01": "AW-05",
+    # "Abandoned Wastes: Map Disruptor 02": "AW-03",
+    # "Central Core: Map Disruptor 01": "CC-03",
+    # "Central Core: Map Disruptor 02": "CC-05",
+    # "Pinion's Expanse: Map Disruptor": "PE-01",
+    # "Incinerator Burner: Map Disruptor": "IB-01",
+    # "Water Ducts: Map Disruptor": "Water Ducts",
+    # "Factory Facility: Map Disruptor 01": "Factory Facility",
+    # "Factory Facility: Map Disruptor 02": "Factory Facility",
+    # "Blazing Furnace: Map Disruptor": "Blazing Furnace",
+    # "Sunken Wastes: Map Disruptor": "SW-01",
+    # "Forgotten Ruins: Map Disruptor": "Forgotten Ruins",
+    # "The Last Bunker: Map Disruptor 01": "TLB-02",
+    # "The Last Bunker: Map Disruptor 02": "TLB-05",
+    # endregion
+    # region Train Stations
+    # "Abandoned Wastes: Train Station": "AW-02",
+    # "Central Core: Train Station": "CC-01",
+    # "Pinion's Expanse: Train Station": "PE-01",
+    # "Water Ducts: Train Station": "Water Ducts",
+    # "Factory Facility: Train Station": "Factory Facility",
+    # "Sunken Wastes: Train Station": "SW-01",
+    # "Forgotten Ruins: Train Station": "Forgotten Ruins",
+    # "The Last Bunker: Train Station": "TLB-03",
     # endregion
 }
 
@@ -141,42 +139,42 @@ exclusionTable = {
     "wrench": {
         "Adjustable Wrench"
     },
-    "mapDisruptors": {
-        "Abandoned Wastes: Map Disruptor 01",
-        "Abandoned Wastes: Map Disruptor 02",
-        "Central Core: Map Disruptor 01",
-        "Central Core: Map Disruptor 02",
-        "Pinion's Expanse: Map Disruptor",
-        "Incinerator Burner: Map Disruptor",
-        "Water Ducts: Map Disruptor",
-        "Factory Facility: Map Disruptor 01",
-        "Factory Facility: Map Disruptor 02",
-        "Blazing Furnace: Map Disruptor",
-        "Sunken Wastes: Map Disruptor",
-        "Forgotten Ruins: Map Disruptor",
-        "The Last Bunker: Map Disruptor 01",
-        "The Last Bunker: Map Disruptor 02"
-    },
-    "trainStations": {
-        "Abandoned Wastes: Train Station",
-        "Central Core: Train Station",
-        "Pinion's Expanse: Train Station",
-        "Water Ducts: Train Station",
-        "Factory Facility: Train Station",
-        "Sunken Wastes: Train Station",
-        "Forgotten Ruins: Train Station",
-        "The Last Bunker: Train Station"
-    },
+    #"mapDisruptors": {
+    #    "Abandoned Wastes: Map Disruptor 01",
+    #    "Abandoned Wastes: Map Disruptor 02",
+    #    "Central Core: Map Disruptor 01",
+    #    "Central Core: Map Disruptor 02",
+    #    "Pinion's Expanse: Map Disruptor",
+    #    "Incinerator Burner: Map Disruptor",
+    #    "Water Ducts: Map Disruptor",
+    #    "Factory Facility: Map Disruptor 01",
+    #    "Factory Facility: Map Disruptor 02",
+    #    "Blazing Furnace: Map Disruptor",
+    #    "Sunken Wastes: Map Disruptor",
+    #    "Forgotten Ruins: Map Disruptor",
+    #    "The Last Bunker: Map Disruptor 01",
+    #    "The Last Bunker: Map Disruptor 02"
+    #},
+    #"trainStations": {
+    #    "Abandoned Wastes: Train Station",
+    #    "Central Core: Train Station",
+    #    "Pinion's Expanse: Train Station",
+    #    "Water Ducts: Train Station",
+    #    "Factory Facility: Train Station",
+    #    "Sunken Wastes: Train Station",
+    #    "Forgotten Ruins: Train Station",
+    #    "The Last Bunker: Train Station"
+    #},
     "chipSockets": {
         "Water Ducts: Blue Chip Socket",
         "Blazing Furnace: Red Chip Socket",
         "Forgotten Ruins: Green Chip Socket",
         "Traveling Town: Red Chip Socket",
         "Traveling Town: BLue Chip Socket"
-    },
-    "creators": {
-        "Electron",
-        "Proton",
-        "Neutron"
-    }
+    }#,
+    #creators": {
+    #    "Electron",
+    #    "Proton",
+    #    "Neutron"
+    #}
 }
