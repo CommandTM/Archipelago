@@ -12,7 +12,6 @@ all_items = {
     "Space Disruptor": ItemClassification.progression,
     "Power Bomb": ItemClassification.progression,
     "Adjustable Wrench": ItemClassification.useful,
-    "Goldcrest Whistle": ItemClassification.useful,
     # endregion
     # region Chips
     "Infinity Edge": ItemClassification.useful,
@@ -45,6 +44,8 @@ all_items = {
     "Power Processor": ItemClassification.useful,
     # endregion
     "Power Cell": ItemClassification.progression_skip_balancing,
+    # region InventoryItems
+    "Goldcrest Whistle": ItemClassification.useful,
     "Health Fragment": ItemClassification.useful,
     "Rusted Key": ItemClassification.progression_skip_balancing,
     "Electric Key": ItemClassification.progression_skip_balancing,
@@ -52,6 +53,7 @@ all_items = {
     "Green Skull": ItemClassification.useful,
     "Red Skull": ItemClassification.useful,
     "Liquid Coolant": ItemClassification.useful,
+    # endregion
     # region Chip Sockets
     "Red Chip Socket": ItemClassification.useful,
     "Blue Chip Socket": ItemClassification.useful,
