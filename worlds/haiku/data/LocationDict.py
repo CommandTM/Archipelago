@@ -70,15 +70,17 @@ all_locations = {
     # endregion
     # region Health Fragments
     "Abandoned Wastes: Health Fragment": "AW-01",
-    "Central Core: Health Fragment 01": "AW-01",
-    "Central Core: Health Fragment 02": "AW-01",
+    "Central Core: Health Fragment": "AW-01",
+    "Quatern's Project: Health Fragment 01": "AW-01",
+    "Quatern's Project: Health Fragment 02": "AW-01",
     "Pinion's Expanse: Health Fragment": "AW-01",
     "Water Ducts: Health Fragment": "AW-01",
     "Factory Facility: Health Fragment": "AW-01",
     "Sunken Wastes: Health Fragment": "AW-01",
     "Forgotten Ruins: Health Fragment": "AW-01",
     "The Last Bunker: Health Fragment": "AW-01",
-    "Traveling Town: Health Fragment": "AW-01",
+    "Traveling Town: Health Fragment 01": "AW-01",
+    "Traveling Town: Health Fragment 02": "AW-01",
     # endregion
     # region Rusty Keys
     "Abandoned Wastes: Rusty Key": "AW-01",
