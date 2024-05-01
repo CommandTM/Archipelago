@@ -138,7 +138,7 @@ necessaryItems = {
     "Power Enhancer": 1,
     "Power Processor": 1,
     "Power Cell": 24,
-    "Health Fragment": 10,
+    "Health Fragment": 12,
     "Rusted Key": 4,
     "Electric Key": 1,
     "Cassette Tape": 1,
