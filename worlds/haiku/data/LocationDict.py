@@ -10,7 +10,6 @@ all_locations = {
     "Space Disruptor": "AW-01",
     "Power Bomb": "AW-01",
     "Adjustable Wrench": "AW-01",
-    "Goldcrest Whistle": "AW-01",
     # endregion
     # region Chips
     "Infinity Edge": "AW-01",
@@ -86,6 +85,7 @@ all_locations = {
     "Sunken Wastes: Rusty Key": "AW-01",
     "Factory Facility: Rusty Key": "AW-01",
     # endregion
+    "Goldcrest Whistle": "AW-01",
     "Electric Key": "AW-01",
     "Cassette Tape": "AW-01",
     "Green Skull": "AW-01",
