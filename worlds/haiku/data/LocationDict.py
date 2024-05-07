@@ -102,7 +102,7 @@ all_locations = {
     "Blazing Furnace: Red Chip Socket": "AW-01",
     "Forgotten Ruins: Green Chip Socket": "AW-01",
     "Traveling Town: Red Chip Socket": "AW-01",
-    "Traveling Town: BLue Chip Socket": "AW-01",
+    "Traveling Town: Blue Chip Socket": "AW-01",
     # endregion
     # region Creators
     # "Electron": "CC-E",
