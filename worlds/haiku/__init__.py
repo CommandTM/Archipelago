@@ -104,7 +104,7 @@ class HaikuWorld(World):
                 ret.exits.append(Entrance(self.player, exit, ret))
             return ret
 
-        self.multiworld.regions += [HaikuRegion(*r) for r in haikuRegions]
+        self.multiworld.regions += [HaikuRegion(r, haikuRegions[r]) for r in haikuRegions.keys()]
         linkHaikuAreas(self.multiworld, self.player)
 
     def set_rules(self):
