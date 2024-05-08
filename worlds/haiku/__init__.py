@@ -3,7 +3,7 @@ from typing import Dict, Any
 from BaseClasses import Item, Region, Entrance, Tutorial
 from worlds.AutoWorld import WebWorld, World
 from .Items import fillItemTable, item_table, HaikuItem
-from .data.ItemDict import necessaryItems, chipSockets, junkWeights
+from .data.ItemDict import necessaryItems, junkWeights
 from .data.LocationDict import exclusionTable
 from .data.Presets import optionsPresets
 from .Locations import advancement_table, fillAdvancementTable, HaikuAdvancement
@@ -68,11 +68,11 @@ class HaikuWorld(World):
         #else:
         #    exculsionPool.update(exclusionTable["trainStations"])
 
-        if self.options.chip_sockets.value:  # Chip Sockets Option
-            for name, num in chipSockets.items():
-                itempool += [name] * num
-        else:
-            exculsionPool.update(exclusionTable["chipSockets"])
+        #if self.options.chip_sockets.value:  # Chip Sockets Option
+        #    for name, num in chipSockets.items():
+        #        itempool += [name] * num
+        #else:
+        #    exculsionPool.update(exclusionTable["chipSockets"])
 
         #if self.options.creators.value:  # Creators Option
         #    for name, num in creators.items():
@@ -93,12 +93,12 @@ class HaikuWorld(World):
             ret = Region(region_name, self.player, self.multiworld)
             ret.locations += [HaikuAdvancement(self.player, loc_name, loc_data.id, ret)
                               for loc_name, loc_data in advancement_table.items()
-                              if loc_data.region == region_name and
-                              (loc_name not in exclusionTable["wrench"] or self.options.wrench.value) and
-                              #(loc_name not in exclusionTable["mapDisruptors"] or self.options.map_disruptors.value) and
-                              #(loc_name not in exclusionTable["trainStations"] or self.options.train_stations.value) and
-                              (loc_name not in exclusionTable["chipSockets"] or self.options.chip_sockets.value)] #and
-                              #(loc_name not in exclusionTable["creators"] or self.options.creators.value)]
+                                if loc_data.region == region_name and
+                                (loc_name not in exclusionTable["wrench"] or self.options.wrench.value) and
+                                (loc_name not in exclusionTable["chipSockets"] or self.options.chip_sockets.value)]  # and
+                                #(loc_name not in exclusionTable["mapDisruptors"] or self.options.map_disruptors.value) and
+                                #(loc_name not in exclusionTable["trainStations"] or self.options.train_stations.value) and
+                                #(loc_name not in exclusionTable["creators"] or self.options.creators.value)]
             for exit in exits:
                 ret.exits.append(Entrance(self.player, exit, ret))
             return ret

@@ -144,7 +144,10 @@ necessaryItems = {
     "Cassette Tape": 1,
     "Green Skull": 1,
     "Red Skull": 1,
-    "Liquid Coolant": 3
+    "Liquid Coolant": 3,
+    "Red Chip Socket": 2,
+    "Blue Chip Socket": 2,
+    "Green Chip Socket": 1
 }
 
 #mapDisruptors = {
@@ -174,12 +177,6 @@ necessaryItems = {
 #    "Forgotten Ruins: Train Station": 1,
 #    "The Last Bunker: Train Station": 1
 #}
-
-chipSockets = {
-    "Red Chip Socket": 2,
-    "Blue Chip Socket": 2,
-    "Green Chip Socket": 1
-}
 
 #creators = {
 #    "Electron": 1,
