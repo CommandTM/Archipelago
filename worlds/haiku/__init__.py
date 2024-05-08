@@ -8,7 +8,7 @@ from .data.LocationDict import exclusionTable
 from .data.Presets import optionsPresets
 from .Locations import advancement_table, fillAdvancementTable, HaikuAdvancement
 from .Options import HaikuOptions
-from .Regions import linkHaikuAreas, haikuRegions
+from .Regions import linkHaikuAreas, createTwoWayEntrances, haikuRegions
 from .Rules import setRules, setCompletionRules
 
 offset = 1651104000
@@ -39,6 +39,7 @@ class HaikuWorld(World):
 
     fillItemTable(offset)
     fillAdvancementTable(offset)
+    createTwoWayEntrances()
 
     item_name_to_id = {name: data.code for name, data in item_table.items()}
     location_name_to_id = {name: data.id for name, data in advancement_table.items()}

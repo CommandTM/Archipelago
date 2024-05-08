@@ -53,5 +53,5 @@ class HaikuOptions(PerGameCommonOptions):
     # train_stations: shuffleTrainStations
     # creators: shuffleCreators
     wrench: shuffleWrench
-    # chip_sockets: shuffleChipSockets
+    chip_sockets: shuffleChipSockets
     # death_link: deathLink
