@@ -116,6 +116,6 @@ class HaikuWorld(World):
         return item
 
     def fill_slot_data(self) -> Dict[str, Any]:
-        slot_data = self.options.as_dict("wrench", "chip_sockets")
+        slot_data = self.options.as_dict("wrench")
         slot_data["baseID"] = offset
         return slot_data
