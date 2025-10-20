@@ -41,6 +41,6 @@ class AtlyssWorld(World):
 
     def fill_slot_data(self) -> Mapping[str, Any]:
         return self.options.as_dict(
-            "crafting_quests"
+            "crafting_quests", "skill_quests", "exp_mult"
         )
 

@@ -13,9 +13,6 @@ def set_all_rules(world: AtlyssWorld) -> None:
     set_completion_condition(world)
 
 def set_all_entrance_rules(world: AtlyssWorld) -> None:
-    set_rule(world.get_entrance("Sanctum_Outer Sanctum"),
-             lambda state: state.has("Outer Sanctum Portal", world.player))
-
     set_rule(world.get_entrance("Outer Sanctum_Arcwood Pass"),
              lambda state: state.has("Arcwood Pass Portal", world.player))
 
@@ -37,9 +34,6 @@ def set_all_entrance_rules(world: AtlyssWorld) -> None:
     set_rule(world.get_entrance("Crescent Road_Crescent Keep"),
              lambda state: state.has("Crescent Keep Portal", world.player))
 
-    set_rule(world.get_entrance("Crescent Keep_Crescent Grove"),
-             lambda state: state.has("Crescent Grove Portal", world.player))
-
     set_rule(world.get_entrance("Crescent Keep_Gate of the Moon"),
              lambda state: state.has("Gate of the Moon Portal", world.player))
 
@@ -53,59 +47,179 @@ def set_all_entrance_rules(world: AtlyssWorld) -> None:
              lambda state: state.has("Bularr Fortress Portal", world.player))
 
 def set_all_location_rules(world: AtlyssWorld) -> None:
-    set_rule(world.get_location("Communing Catacombs"),
+    #region Angela Quests
+    set_rule(world.get_location("Angela: Communing Catacombs"),
              lambda state: state.can_reach("Sanctum Catacombs", "Region", world.player) and
-                            state.has("Sanctum Catacombs (1-6) Unlock", world.player) and
-                            state.can_reach("A Warm Welcome", "Location", world.player))
+                            state.has("Sanctum Catacombs (1-6) Unlock", world.player))
 
-    set_rule(world.get_location("Diva Must Die"),
+    set_rule(world.get_location("Angela: Diva Must Die"),
              lambda state: state.can_reach("Effold Terrace", "Region", world.player) and
-                            state.can_reach("Communing Catacombs", "Location", world.player))
+                            state.can_reach("Angela: Communing Catacombs", "Location", world.player))
 
-    set_rule(world.get_location("The Keep Within"),
+    set_rule(world.get_location("Angela: The Keep Within"),
              lambda state: state.can_reach("Crescent Keep", "Region", world.player) and
-                            state.can_reach("Diva Must Die", "Location", world.player))
+                            state.can_reach("Angela: Diva Must Die", "Location", world.player))
 
-    set_rule(world.get_location("Tethering Grove"),
+    set_rule(world.get_location("Angela: Tethering Grove"),
              lambda state: state.can_reach("Crescent Grove", "Region", world.player) and
                             state.has("Crescent Grove (15-20) Unlock", world.player) and
-                            state.can_reach("The Keep Within", "Location", world.player))
+                            state.can_reach("Angela: The Keep Within", "Location", world.player))
 
-    set_rule(world.get_location("The Gylyphik Booklet"),
+    set_rule(world.get_location("Angela: Spiraling In The Grove"),
+             lambda state: state.can_reach("Crescent Grove", "Region", world.player) and
+                           state.has("Crescent Grove (15-20) Unlock", world.player) and
+                           state.can_reach("Angela: Tethering Grove", "Location", world.player))
+
+    set_rule(world.get_location("Angela: Hell In The Grove"),
+             lambda state: state.can_reach("Crescent Grove", "Region", world.player) and
+                           state.has("Crescent Grove (20-25) Unlock", world.player) and
+                           state.can_reach("Angela: Tethering Grove", "Location", world.player))
+
+    set_rule(world.get_location("Angela: The Gylyphik Booklet"),
              lambda state: state.can_reach("Luvora Garden", "Region", world.player) and
                             state.can_reach("Tuul Enclave", "Region", world.player) and
                             state.can_reach("Crescent Grove", "Region", world.player) and
                             state.has("Crescent Grove (20-25) Unlock", world.player) and
                             state.can_reach("Bularr Fortress", "Region", world.player))
 
-    set_rule(world.get_location("Wicked Wizboars"),
+    set_rule(world.get_location("Angela: Wicked Wizboars"),
              lambda state: state.can_reach("Tuul Valley", "Region", world.player))
 
-    set_rule(world.get_location("Nulversa Magica"),
+    set_rule(world.get_location("Angela: Nulversa Magica"),
              lambda state: state.can_reach("Crescent Grove", "Region", world.player) and
                             state.has("Crescent Grove (20-25) Unlock", world.player) and
                             state.can_reach("Tuul Enclave", "Region", world.player))
+    #endregion
+    #region Enok Quests
+    set_rule(world.get_location("Enok: Huntin' Hogs"),
+             lambda state: state.can_reach("Tuul Valley", "Region", world.player) or
+                            state.can_reach("Crescent Keep", "Region", world.player))
 
+    set_rule(world.get_location("Enok: Finding Ammagon"),
+             lambda state: state.can_reach("Bularr Fortress", "Region", world.player))
+
+    set_rule(world.get_location("Enok: The Colossus"),
+             lambda state: state.can_reach("Crescent Grove", "Region", world.player) and
+                           state.has("Crescent Grove (15-20) Unlock", world.player) and
+                           state.can_reach("Angela: The Keep Within", "Location", world.player))
+
+    set_rule(world.get_location("Enok: Purging the Grove"),
+             lambda state: state.can_reach("Crescent Grove", "Region", world.player) and
+                           state.has("Crescent Grove (15-20) Unlock", world.player) and
+                           state.can_reach("Enok: The Colossus", "Location", world.player))
+
+    set_rule(world.get_location("Enok: Cleansing the Grove"),
+             lambda state: state.can_reach("Crescent Grove", "Region", world.player) and
+                           state.has("Crescent Grove (20-25) Unlock", world.player) and
+                           state.can_reach("Enok: The Colossus", "Location", world.player))
+
+    set_rule(world.get_location("Enok: Nulversa Viscera"),
+             lambda state: state.can_reach("Crescent Grove", "Region", world.player) and
+                           state.has("Crescent Grove (20-25) Unlock", world.player))
+    #endregion
+    #region Sally Quests
+    set_rule(world.get_location("Sally: Ghostly Goods"),
+             lambda state: state.can_reach("Sanctum Catacombs", "Region", world.player) and
+                           (state.has("Sanctum Catacombs (1-6) Unlock", world.player) or
+                            state.has("Sanctum Catacombs (6-12) Unlock", world.player) or
+                            state.has("Sanctum Catacombs (12-18) Unlock", world.player)))
+
+    set_rule(world.get_location("Sally: Makin' a Mekspear"),
+             lambda state: state.can_reach("Effold Terrace", "Region", world.player) and
+                            (state.can_reach("Tuul Valley", "Region", world.player) or
+                            state.can_reach("Crescent Keep", "Region", world.player)))
+
+    set_rule(world.get_location("Sally: Makin' a Wizwand"),
+             lambda state: state.can_reach("Crescent Keep", "Region", world.player))
+
+    set_rule(world.get_location("Sally: Makin' a Vile Blade"),
+             lambda state: state.can_reach("Crescent Road", "Region", world.player) and
+                            state.can_reach("Crescent Keep", "Region", world.player) and
+                            state.can_reach("Effold Terrace", "Region", world.player) and
+                            state.can_reach("Sanctum Catacombs", "Region", world.player) and
+                            state.has("Sanctum Catacombs (6-12) Unlock", world.player))
+
+    set_rule(world.get_location("Sally: Makin' a Golem Chestplate"),
+             lambda state: state.can_reach("Crescent Keep", "Region", world.player) and
+                            state.can_reach("Angela: The Keep Within", "Location", world.player))
+
+    set_rule(world.get_location("Sally: Makin' a Ragespear"),
+             lambda state: state.can_reach("Sally: Makin' a Mekspear", "Location", world.player) and
+                            state.can_reach("Bularr Fortress", "Region", world.player) and
+                            state.can_reach("Sanctum Catacombs", "Region", world.player) and
+                            state.has("Sanctum Catacombs (12-18) Unlock", world.player))
+
+    set_rule(world.get_location("Sally: Makin' a Monolith Chestplate"),
+             lambda state: state.can_reach("Sally: Makin' a Golem Chestplate", "Location", world.player) and
+                            state.can_reach("Crescent Grove", "Region", world.player) and
+                            state.has("Crescent Grove (15-20) Unlock", world.player))
+
+    set_rule(world.get_location("Sally: Makin' a Firebreath Blade"),
+             lambda state: state.can_reach("Crescent Grove", "Region", world.player) and
+                            state.has("Crescent Grove (15-20) Unlock", world.player) and
+                            state.has("Crescent Grove (20-25) Unlock", world.player))
+
+    set_rule(world.get_location("Sally: Makin' a Follycannon"),
+             lambda state: state.can_reach("Bularr Fortress", "Region", world.player))
+
+    set_rule(world.get_location("Sally: Nulversa, Greenversa!"),
+             lambda state: state.can_reach("Crescent Grove", "Region", world.player) and
+                            state.has("Crescent Grove (15-20) Unlock", world.player) and
+                            state.has("Crescent Grove (20-25) Unlock", world.player))
+    #endregion
+    #region Zuula Quests
+    set_rule(world.get_location("Zuula: Killing Tomb"),
+             lambda state: state.can_reach("Sanctum Catacombs", "Region", world.player) and
+                            state.has("Sanctum Catacombs (1-6) Unlock", world.player))
+
+    set_rule(world.get_location("Zuula: The Voice of Zuulneruda"),
+             lambda state: state.can_reach("Zuula: Killing Tomb", "Location", world.player) and
+                            state.can_reach("Sanctum Catacombs", "Region", world.player) and
+                            state.has("Sanctum Catacombs (6-12) Unlock", world.player))
+
+    set_rule(world.get_location("Zuula: Purging the Undead"),
+             lambda state: state.can_reach("Zuula: Killing Tomb", "Location", world.player) and
+                            state.can_reach("Sanctum Catacombs", "Region", world.player) and
+                            state.has("Sanctum Catacombs (6-12) Unlock", world.player))
+
+    set_rule(world.get_location("Zuula: Rattlecage Rage"),
+             lambda state: state.can_reach("Zuula: Killing Tomb", "Location", world.player) and
+                            state.can_reach("Sanctum Catacombs", "Region", world.player) and
+                             state.has("Sanctum Catacombs (6-12) Unlock", world.player))
+
+    set_rule(world.get_location("Zuula: Consumed Madness"),
+             lambda state: state.can_reach("Zuula: The Voice of Zuulneruda", "Location", world.player) and
+                              state.can_reach("Sanctum Catacombs", "Region", world.player) and
+                              state.has("Sanctum Catacombs (12-18) Unlock", world.player))
+
+    set_rule(world.get_location("Zuula: Eradicating the Undead"),
+             lambda state: state.can_reach("Zuula: The Voice of Zuulneruda", "Location", world.player) and
+                            state.can_reach("Sanctum Catacombs", "Region", world.player) and
+                            state.has("Sanctum Catacombs (12-18) Unlock", world.player))
+    #endregion
+    #region Misc. Quests
+    set_rule(world.get_location("Craig: Up and Over It"),
+             lambda state: state.can_reach("Trial of the Stars", "Region", world.player))
+    #endregion
     set_rule(world.get_location("Sanctum Catacombs (1-6): Complete"),
              lambda state: state.can_reach("Sanctum Catacombs", "Region", world.player) and
-                           state.has("Sanctum Catacombs (1-6) Unlock", world.player))
+                               state.has("Sanctum Catacombs (1-6) Unlock", world.player))
 
     set_rule(world.get_location("Sanctum Catacombs (6-12): Complete"),
              lambda state: state.can_reach("Sanctum Catacombs", "Region", world.player) and
-                           state.has("Sanctum Catacombs (6-12) Unlock", world.player))
+                            state.has("Sanctum Catacombs (6-12) Unlock", world.player))
 
     set_rule(world.get_location("Sanctum Catacombs (12-18): Complete"),
              lambda state: state.can_reach("Sanctum Catacombs", "Region", world.player) and
-                           state.has("Sanctum Catacombs (12-18) Unlock", world.player))
+                            state.has("Sanctum Catacombs (12-18) Unlock", world.player))
 
     set_rule(world.get_location("Crescent Grove (15-20): Complete"),
              lambda state: state.can_reach("Crescent Grove", "Region", world.player) and
-                           state.has("Crescent Grove (15-20) Unlock", world.player))
+                               state.has("Crescent Grove (15-20) Unlock", world.player))
 
     set_rule(world.get_location("Crescent Grove (20-25): Complete"),
              lambda state: state.can_reach("Crescent Grove", "Region", world.player) and
-                           state.has("Crescent Grove (20-25) Unlock", world.player))
-
+                             state.has("Crescent Grove (20-25) Unlock", world.player))
 
 
 def set_completion_condition(world: AtlyssWorld) -> None:

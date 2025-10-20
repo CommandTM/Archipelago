@@ -36,6 +36,9 @@ def create_all_items(world: AtlyssWorld) -> None:
         if all_items[name].classification & ItemClassification.progression == ItemClassification.progression:
             itempool.append(create_item_with_correct_classification(world, name))
 
+    if world.options.early_arcwood:
+        world.multiworld.early_items[world.player]["Arcwood Pass Portal"] = 1
+
     number_of_items = len(itempool)
 
     number_of_unfilled_locations = len(world.multiworld.get_unfilled_locations(world.player))

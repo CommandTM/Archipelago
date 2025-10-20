@@ -5,7 +5,7 @@ from typing import TYPE_CHECKING
 from BaseClasses import Location
 if TYPE_CHECKING:
     from .world import AtlyssWorld
-from worlds.atlyss.data.locations import all_locations
+from worlds.atlyss.data.locations import all_locations, always_locations, crafting_quests, skill_quests
 
 class AtlyssLocation(Location):
     game = "Atlyss"
@@ -16,7 +16,17 @@ def get_location_names_with_ids(location_names: list[str]) -> dict[str, int | No
     return {location_name: all_locations[location_name] for location_name in location_names}
 
 def create_all_locations(world: AtlyssWorld) -> None:
-    for location_name in all_locations:
+    create_locations_from_list(world, always_locations)
+
+    if world.options.crafting_quests:
+        create_locations_from_list(world, crafting_quests)
+
+    if world.options.skill_quests:
+        create_locations_from_list(world, skill_quests)
+
+
+def create_locations_from_list(world: AtlyssWorld, location_list: list[str]) -> None:
+    for location_name in location_list:
         location_data = all_locations[location_name]
 
         location = AtlyssLocation(world.player, location_name, location_data.id, world.get_region(location_data.region))
