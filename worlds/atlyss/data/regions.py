@@ -1,0 +1,17 @@
+﻿all_regions = {
+    "Sanctum": ["Outer Sanctum"],
+    "Outer Sanctum": ["Arcwood Pass", "Effold Terrace", "Tuul Valley"],
+    "Arcwood Pass": ["Crescent Road", "Sanctum Catacombs"],
+    "Effold Terrace": [],
+    "Tuul Valley": ["Tuul Enclave"],
+    "Crescent Road": ["Crescent Keep", "Luvora Garden"],
+    "Crescent Keep": ["Crescent Grove", "Gate of the Moon"],
+    "Gate of the Moon": ["Wall of the Stars"],
+    "Luvora Garden": [],
+    "Wall of the Stars": ["Trial of the Stars"],
+    "Trial of the Stars": [],
+    "Tuul Enclave": ["Bularr Fortress"],
+    "Bularr Fortress": [],
+    "Sanctum Catacombs": [],
+    "Crescent Grove": [],
+}
