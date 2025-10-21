@@ -91,6 +91,10 @@ def set_all_location_rules(world: AtlyssWorld) -> None:
                             state.can_reach("Tuul Enclave", "Region", world.player))
     #endregion
     #region Enok Quests
+    set_rule(world.get_location("Enok: Night Spirits"),
+             lambda state: state.can_reach("Arcwood Pass", "Region", world.player) or
+                            state.can_reach("Effold Terrace", "Region", world.player))
+
     set_rule(world.get_location("Enok: Huntin' Hogs"),
              lambda state: state.can_reach("Tuul Valley", "Region", world.player) or
                             state.can_reach("Crescent Keep", "Region", world.player))
