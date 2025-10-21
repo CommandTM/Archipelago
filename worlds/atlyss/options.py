@@ -35,8 +35,8 @@ class ExpMult(Range):
     """
     display_name = "Experience Multiplier"
     range_start = 1
-    range_end = 3
-    default = 2
+    range_end = 5
+    default = 3
 
 
 @dataclass

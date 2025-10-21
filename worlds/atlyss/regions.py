@@ -4,7 +4,6 @@ from typing import TYPE_CHECKING
 
 from BaseClasses import Region
 from worlds.atlyss.data.regions import all_regions
-from worlds.stardew_valley.strings.entrance_names import Entrance
 
 if TYPE_CHECKING:
     from .world import AtlyssWorld
